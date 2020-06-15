@@ -1,0 +1,78 @@
+/*HEADER*/
+body{
+  background-color: black;
+}
+.body-header{.
+  height: 100vh;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: grey;
+  font-family: 'Gruppo', cursive;
+}
+
+.barra-superior{
+  display:flex;
+  width: 100%;
+  max-width: 500px;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.barra-izq{
+  width: 50%;
+}
+.logo{
+  display: block;
+  height: 15vh;
+  min-height: 80px;
+  background-image: url(logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.barra-der{
+  width: 50%;
+  text-align: right;
+}
+#superior{
+  display: none;
+}
+
+button#menu:hover + nav#superior, nav#superior:hover{
+  display: block;
+  text-align: left;
+}
+a{
+  color:grey;
+  text-decoration: none;
+}
+
+.opciones-burguer{
+  list-style-type: none;
+}
+#menu{
+  background-color: grey;
+  height: 6vh;
+  min-height: 40px;
+  min-width: 50px;
+  border-radius: 10px;
+  font-family: Gruppo, cursive;
+  font-size: 4vh;
+  font-weight: bolder;
+}
+.opciones-menu{
+  text-decoration: none;
+  color: grey;
+  font-weight: bolder;
+  height: 4vh;
+  font-size: 3vh;
+  margin-bottom: 1vh;
+}
+.opciones-menu:hover{
+  border-bottom: white 1px solid;
+}
+.deslogueo{
+  color: white;
+  text-decoration: none;
+}

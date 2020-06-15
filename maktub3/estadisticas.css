@@ -1,0 +1,41 @@
+body{
+  background-color: black;
+}
+.body-contacto{.
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: grey;
+  font-family: 'Gruppo', cursive;
+}
+.main-contacto{
+  width: 90%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 4vh;
+  font-family: 'Gruppo', cursive;
+  text-align: center;
+}
+h1{
+  font-size: 2rem;
+}
+.porcentaje{
+  font-size: 4rem;
+}
+h2{
+  font-size: 2rem;
+  padding-bottom: 10%;
+}
+h3{
+  font-size: 1.5rem;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  color:grey;
+  font-size: 1.5rem;
+}
+.jugar:hover{
+  border: solid 1px grey;
+}
