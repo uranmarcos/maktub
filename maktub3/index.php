@@ -11,6 +11,7 @@
 
     </header>
     <main>
+      <h1>Juego de lógica</h1>
       <a href="register.php">
         <input class="boton" type="text" name="registro"
          value="Registrarme">
@@ -22,11 +23,7 @@
         value="Ingresar">
       </a>
       <p class="texto-index">
-        Para probar los primeros niveles del juego sin registrarte ingresá
-        <br>
-        <a class="texto-index texto-index-aca" href="#">
-          ACÁ
-        </a>
+        Un valor por nivel.<br>¿En qué secuencia o con qué patrón dicho valor representa el nivel?<br>¡Una vez que lo descubrás, avanzas!
       </p>
     </main>
   </body>

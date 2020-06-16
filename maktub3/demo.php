@@ -4,7 +4,7 @@ require_once("respuestas.php");
 require_once("header.php");
 
 //DECLARACION DE VARIABLES A USAR
-$resultado ="";
+$resultado ="1";
 $nivel = 1;
 $variableError = 0;
 $mensajeError="";
@@ -13,34 +13,34 @@ $probar = "hidden";
 $resultado2="";
 $botonRegister= "hidden";
 $logueo="menu";
+$respuesta = "";
 
-
-//VALIDO LAS respuestas
 if($_GET){
-//Si la respuesta es correcta
-  if($_GET["respuesta"] == $valores[$nivel]){
-    $nivel = $nivel+1;
-    $resultado = $valor[$nivel];
+  for ($i=0; $i <count($valores); $i++) {
+      if($_GET["respuesta"] == $valores[$i]){
+      $resultado = $valor[$i+1];
+      $mensajeError = NULL;
+      $nivel = $nivel +$i;
+    }elseif (in_Array($_GET["respuesta"],$valores)==FALSE) {
+      $variableError = array_rand($errores, 1);
+      $resultado = NULL;
+      $botonEnviar = "hidden";
+      $probar = "probar";
+      $mensajeError = $errores[$variableError];
+      $nivel="";
+    }
+    elseif ($_GET["respuesta"] ==$valores[10]) {
+      $resultado2 = "Para acceder a los siguientes niveles debes registrarte. Gracias!";
+      $mensajeError = null;
+      $nivel="";
+      break;
+    }
+
+    }
+  }else{
+    $resultado = 1;
+    $mensajeError = NULL;
   }
-//SI LA RESPUESTA ES INCORRECTA
-  elseif(($_GET["respuesta"] != $valores[$nivel])){
-    $variableError = array_rand($errores, 1);
-    $resultado = NULL;
-    $nivel = NULL;
-    $mensajeError = $errores[$variableError];
-    $botonEnviar = "hidden";
-    $probar = "button";
-  }
-  elseif($_GET["respuesta"] == $valores[9]) {
-    $resultado2 = "Para acceder a los siguientes niveles debes registrarte. Gracias!";
-    $mensajeError = null;
-    $nivel=NULL;
-    $botonEnviar ="hidden";
-    $botonRegister = "button";
-  }
-}else{
-  $resultado = 1;
-}
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +54,6 @@ if($_GET){
   </head>
   <body>
     <div class="body-niveles">
-      <main class="main-niveles">
         <div class="valor">
             <h1><?php echo $resultado ?></h1>
             <h3><?php echo $resultado2 ?></h3>
@@ -66,14 +65,15 @@ if($_GET){
               <input class="campo-respuesta" type="text" name="respuesta" method="GET">
               <br>
               <input class="enviar" type= "<?php echo $botonEnviar ?>" name= " " value= "ENVIAR">
-              <input type="<?php echo $probar?>" value="Volver atrás" onclick="history.back()" style="font-family: Verdana; font-size: 10 pt">
+              <div class="<?php echo $probar?>">
+                <a href="maktub2.php">Probar de nuevo</a>
+              </div>
               <a href="register.php"><input class="enviar" type= "<?php echo $botonRegister ?>" name= " " value= "REGISTRARME"></a>
             </form>
         </div>
         <div class="nivel">
             <h2><?php echo $nivel  ?></h2>
         </div>
-      </main>
     </div>
   </body>
 </html>

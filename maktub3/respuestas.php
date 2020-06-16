@@ -6,20 +6,20 @@ $valor= [ 1 =>"1",
           3 => "C",
           4 => "OOOO",
           5 => "cinco",
-          6 => 720,
+          6 => 720, /*periodico*/
           7 => "cine",
-          8 => 4264,
+          8 => 4264, /*orden de las letras del nombre, contando por separado consonantes de vocales*/
           9 => "Argentina",
           10 => 1010,
-          11 => 4,
+          11 => 66, /* suma de los numeros incluyendo este*/
           12 => ".---- ..---",
-          13 => "ni",
-          14 => 3,
-          15 => "eiu",
+          13 => "ni",/* alfabeto griego*/
+          14 => 3, /*cantidad de vocales*/
+          15 => "eiu",/*vocales del nombre ordenadas algabeticamente*/
           16 => "++++-----",
-          17 => 59,
-          18 => "nhezthca",
-          19 => 2584
+          17 => 59, /*numeros primos*/
+          18 => "nhezthca", /* nombre en aleman invertido*/
+          19 => 2584/*fibonacci*/
         ];
 
 //RESPUESTAS CORRECTAS

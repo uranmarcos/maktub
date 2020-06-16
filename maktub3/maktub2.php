@@ -77,9 +77,6 @@ if($_GET){
 }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html>
   <head>

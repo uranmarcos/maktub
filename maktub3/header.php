@@ -5,6 +5,13 @@
 //TOMO NOMBRE PARA EL LOGUEO
   if(isset($_SESSION["name"])){
     $logueo = $_SESSION["name"];
+    $contacto = "contacto.php";
+    $estadisticas = "estadisticas.php";
+    $logOut = "logout.php";
+  } else {
+    $contacto = "#";
+    $estadisticas = "#";
+    $logOut = "#";
   }
 ?>
 
@@ -28,9 +35,9 @@
             <button id="menu"><?php echo $logueo ?></button>
               <nav id="superior">
                 <ul class="opciones-burguer">
-                  <li><a class="opciones-menu" href="contacto.php">Contacto</a></li>
-                  <li><a class="opciones-menu" href="estadisticas.php">Estadisticas</a></li>
-                  <li><a class="opciones-menu" href="logout.php">Cerrar sesión</a></li>
+                  <li><a class="opciones-menu" href="<?php echo $contacto?>">Contacto</a></li>
+                  <li><a class="opciones-menu" href="<?php echo $estadisticas?>">Estadisticas</a></li>
+                  <li><a class="opciones-menu" href="<?php echo $logOut ?>">Cerrar sesión</a></li>
                 </ul>
               </nav>
           </div>

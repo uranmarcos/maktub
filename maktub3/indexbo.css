@@ -1,8 +1,5 @@
 /*INDEX*/
 .body-index{
-  width: 70%;
-  max-width: 500px;
-  height: auto;
   margin: auto;
   background-color: white;
 }
@@ -10,24 +7,22 @@
   height: 20vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 4vh;
   background-image: url(logo2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 main{
-  margin: 0 auto;
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
+  margin: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   font-family: 'Gruppo', cursive;
 }
-h1{
-  font-size: 2rem;
-  padding-top: 4px;
+.row{
+  margin-left: 10px;
+  margin-right: auto;
+  margin-left: 30px;
 }
 p{
   line-height: 1.5em;
@@ -39,20 +34,28 @@ a .boton{
   text-align: center;
   width: 90%;
   height: 9vh;
-  font-size: 4vh;
+  font-size: 4.4vh;
   font-weight: bolder;
   font-family: 'Gruppo', cursive;
 }
 a .boton:hover{
   background-color: white;
   color: black;
-  text-transform: uppercase;
+  border: solid 4px black;
+  font-size: 4.8vh;
 }
 .texto-index{
-  font-size: 1.5rem;
+  font-size: 4vh;
+  height: 7vh;
+  text-align: center;
   width:auto;
-  margin-bottom: 50px;
   font-weight: bolder;
   text-decoration: none;
   color: black;
+}
+.texto-index-aca:hover{
+  border-bottom: black solid 1px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
