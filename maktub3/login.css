@@ -1,6 +1,6 @@
 .body-login{
   width: 70%;
-  max-width: 700px;
+  max-width: 500px;
   margin: auto;
 }
 .header-login{
@@ -15,8 +15,8 @@
   background-size: contain;
 }
 main{
-  width: 100%;
-  padding-top: 0px;
+  width: 100%;  
+  padding-top: 30px;
 }
 h1{
   text-transform: uppercase;
@@ -46,9 +46,11 @@ form{
   font-size: 3vh;
   height: 5vh;
   }
-  .registrar:hover{
+  .login:hover{
     background-color: white;
     color:black;
+    text-transform: uppercase;
+    font-weight: bolder;
   }
 
 .campoACompletar{

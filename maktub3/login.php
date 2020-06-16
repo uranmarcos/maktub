@@ -53,7 +53,6 @@
     <main>
       <div class="formulario">
         <form class="" action="login.php" method="POST">
-          <h1>Ingresar</h1>
           <p class="campos">Mail:
             <div>
               <input class="campoACompletar" type="text" name="mail" value="<?php $mail ?>">
