@@ -28,6 +28,8 @@ $resultado = $valor[$nivel];
 $probar ="hidden";
 $ocultar ="";
 $correctas="";
+$posicionTexto = array_rand($textoEnMovimiento, 1);
+$texto = $textoEnMovimiento[$posicionTexto];
 //Valido respuestas
 if($_GET){
 //Si la respuesta es correcta
@@ -88,6 +90,9 @@ if($_GET){
   </head>
   <body>
     <div class="body-niveles">
+      <div>
+        <MARQUEE><?php echo $texto?></MARQUEE>
+      </div>
       <main class="main-niveles">
           <div class="valor">
             <h1><?php echo $resultado ?></h1>
