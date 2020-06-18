@@ -75,6 +75,7 @@ $textoEnMovimiento = [
             "En el menú podés acceder a tus estadísticas ¿sabías?",
             NULL,
             NULL,
+            "Sí, sí, las respuestas están controladas",
             NULL,
             NULL,
             NULL,

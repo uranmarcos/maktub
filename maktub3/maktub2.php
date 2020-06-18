@@ -100,7 +100,7 @@ if($_GET){
             <br>
           </div>
           <div class="respuesta">
-            <form class="" action="maktub2.php" method="GET">
+            <form class="" action="maktub2.php" autocomplete="off" method="GET">
               <input class="campo-respuesta <?php echo $ocultar?>" type="text" name="respuesta" method="GET">
               <br>
               <input class="enviar" type= "<?php echo $botonEnviar ?>" name= " " value= "ENVIAR">
