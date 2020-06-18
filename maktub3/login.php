@@ -64,7 +64,9 @@
               <input class="campoACompletar" type="password" name="pass" value"<?php $password ?>">
             </div>
           </p>
-          <br>
+          <div class="recuperarPass">
+            <a href="recuperarPass.php">Olvidé mi contraseña</a>
+          </div>
           <p class="error">
             <?php echo $error ?>
           </p>

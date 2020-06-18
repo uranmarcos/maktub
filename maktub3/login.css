@@ -15,7 +15,7 @@
   background-size: contain;
 }
 main{
-  width: 100%;  
+  width: 100%;
   padding-top: 30px;
 }
 h1{
@@ -31,7 +31,14 @@ form{
   font-size: 20px;
   font-weight: bolder;
 }
-
+.recuperarPass{
+text-align: center;
+}
+.recuperarPass a{
+  text-align: center;
+  text-decoration: none;
+  color:grey;
+}
 .error{
   color:red;
   text-align: center;
