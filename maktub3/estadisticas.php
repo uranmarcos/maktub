@@ -11,7 +11,8 @@ session_start();
   $totalRespuestas="";
   $porcentajeCorrectas="";
   $mensaje="";
-
+  $vecesCorrectas="veces";
+  $vecesIncorrectas="veces";
 //busco en BBD valores para calcular estadisticas
   $query = $baseDeDatos -> Prepare
     ("SELECT nivel, correctas, incorrectas FROM usuarios where mail = '$mail'");
@@ -22,7 +23,12 @@ session_start();
   $nivel = $consultaBDD["nivel"];
   $correctas = $consultaBDD["correctas"];
   $incorrectas = $consultaBDD["incorrectas"];
-
+if($correctas==1){
+  $vecesCorrectas="vez";
+}
+if($incorrectas==1){
+    $vecesIncorrectas="vez";
+}
 //calculo estadísticas
   $totalRespuestas = ($correctas + $incorrectas);
   $porcentajeCorrectas = ($correctas *100/$totalRespuestas);
@@ -53,7 +59,7 @@ session_start();
    <body class="body-contacto">
      <main class="main-contacto">
         <div class="estadisticas">
-          <h1><?php echo $mensaje ?> </h1>
+          <h2><?php echo $mensaje ?></h2>
         </div>
         <div class="estadisticas">
           <h1 class="porcentaje"><?php echo round($porcentajeCorrectas) ?></h1>
@@ -66,10 +72,10 @@ session_start();
           <h3>El promedio para este nivel es: <?php echo $promedioNivel?> %</h3>
         </div>
         <div class="estadisticas">
-          <h3>Has respondido: <?php echo $correctas ?> vez/veces bien! ;) </h3>
+          <h3>Has respondido: <?php echo $correctas ?> <?php echo $vecesCorrectas?> bien! ;) </h3>
         </div>
         <div class="estadisticas">
-          <h3>Y le has pifiado <?php echo $incorrectas ?> vez/veces. </h3>
+          <h3>Y le has pifiado <?php echo $incorrectas ?> <?php echo $vecesIncorrectas?> </h3>
         </div>
         <a  class="jugar" href="maktub2.php">Seguir Jugando</a>
      </main>
