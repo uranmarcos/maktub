@@ -90,10 +90,10 @@ if($_GET){
   </head>
   <body>
     <div class="body-niveles">
-      <div>
-        <MARQUEE><?php echo $texto?></MARQUEE>
-      </div>
       <main class="main-niveles">
+        <div>
+          <MARQUEE><?php echo $texto?></MARQUEE>
+        </div>
           <div class="valor">
             <h1><?php echo $resultado ?></h1>
             <h3><?php echo $mensajeError ?></h3>

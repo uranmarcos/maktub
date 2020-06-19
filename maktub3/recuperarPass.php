@@ -32,7 +32,7 @@
             ("UPDATE usuarios SET password='$hash'
             WHERE mail = '$mail'");
             $consulta->execute();
-            echo "<script>location.href='login.php?removido=true';</script>";
+            echo "<script>location.href='index.php?removido=true';</script>";
             exit;
         } else {
             $error = "Los datos ingresados no son correctos";

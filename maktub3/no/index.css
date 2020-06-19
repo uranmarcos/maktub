@@ -1,6 +1,7 @@
 /*INDEX*/
 .body-index{
-  width: 70%;
+  width: 90%;
+  border: solid 1px red;
   max-width: 500px;
   height: auto;
   margin: auto;
