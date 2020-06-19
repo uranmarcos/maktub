@@ -52,25 +52,34 @@ a{
   list-style-type: none;
 }
 #menu{
-  background-color: grey;
-  height: 6vh;
-  min-height: 40px;
-  min-width: 50px;
-  border-radius: 10px;
+  background-color: black;
+  color:grey;
+  height: 30px;
+  width: 200px;
+  border: solid 2px grey;
   font-family: Gruppo, cursive;
-  font-size: 4vh;
+  font-size: 20px;
   font-weight: bolder;
 }
 .opciones-menu{
   text-decoration: none;
   color: grey;
   font-weight: bolder;
-  height: 4vh;
-  font-size: 3vh;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 20px;
   margin-bottom: 1vh;
 }
 .opciones-menu:hover{
-  border-bottom: white 1px solid;
+  background-color: grey;
+  color:grey;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
 }
 .deslogueo{
   color: white;

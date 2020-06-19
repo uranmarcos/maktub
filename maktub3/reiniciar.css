@@ -12,36 +12,33 @@ body{
 
 .main-contacto{
   display: flex;
+  height: 50vh;
+  margin-top: 10vh;
   flex-direction: column;
   align-items: center;
-  margin-top: 5vh;
+  border-left: solid 1px grey;
+  border-right: solid 1px grey;
   margin-left: auto;
   margin-right: auto;
   line-height: 4vh;
   font-family: 'Gruppo', cursive;
   text-align: center;
 }
-.estadisticas{
-  height: 8vh;
-  color: blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: solid 1px red;
-}
-.column{
-  flex-direction: column;
-  justify-content: center;
-}
-
-.caja-porcentaje{
+.boton-reiniciar{
+  text-align: center;
+  height: 50px;
   width: 200px;
-  height: 20px;
-  border: solid 1px grey;
-}
-.porcentajeDeJuego{
+  font-family: 'Gruppo', cursive;
+  font-weight: bolder;
   background-color: grey;
-  height: 20px;
+  margin-top: 20px;
+  color:black;
+  font-size: 30px;
+}
+.boton-reiniciar:hover{
+  border: solid 2px grey;
+  background-color: black;
+  color:grey;
 }
 a{
   text-decoration: none;

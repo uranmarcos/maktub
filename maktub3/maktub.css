@@ -1,0 +1,111 @@
+
+/*NIVELES*/
+body{
+  background-color: black;
+  font-family: 'Gruppo', cursive;
+}
+.body-niveles{
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: grey;
+}
+.main-niveles{
+  display: flex;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+}
+.valor{
+  height: 40vh;
+  width: 90%;
+}
+h1{
+  display: block;
+  padding-top: 4vh;
+  font-size: 4rem;
+  text-align: center;
+}
+h3{
+  padding-top: 4vh;
+  font-size: 2.5rem;
+  font-family: Gruppo, cursive;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+.respuesta{
+  height: 20vh;
+}
+.campo-respuesta{
+  height: 10vh;
+  background-color: lightgrey;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  font-family: 'Gruppo', cursive;
+  font-size: 8vh;
+  font-weight: bolder;
+}
+.ocultar{
+  display: none;
+}
+.enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gruppo', cursive;
+  font-weight: bolder;
+  font-size: 2em;
+  background-color: grey;
+  color: black;
+  width: auto;
+  height: 8vh;
+  margin: 17px auto;
+}
+.enviar:hover{
+  border: solid 3px black;
+}
+.hidden{
+  display: none;
+}
+.probar{
+  text-align: center;
+  font-family: 'Gruppo', cursive;
+  color: grey;
+  margin-top: 40px;
+  height: 8vh;
+  font-size: 2em;
+  font-weight: bolder;
+}
+.probar a{
+  color:grey;
+  text-decoration: none;
+}
+.probar:hover{
+  border-bottom: solid 3px grey;
+}
+.nivel{
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.check{
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+.numeros{
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+h2{
+  font-size: 2.4em;
+}

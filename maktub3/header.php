@@ -8,10 +8,12 @@
     $contacto = "contacto.php";
     $estadisticas = "estadisticas.php";
     $logOut = "logout.php";
+    $reiniciar = "reiniciar.php";
   } else {
     $contacto = "#";
     $estadisticas = "#";
     $logOut = "#";
+    $reiniciar = "#";
   }
 ?>
 
@@ -21,7 +23,7 @@
   <head>
     <title>Maktub</title>
     <meta charset="utf-8">
-    <link href="header.css" rel="stylesheet">
+    <link href="header2.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
@@ -38,6 +40,7 @@
                   <li><a class="opciones-menu" href="<?php echo $contacto?>">Contacto</a></li>
                   <li><a class="opciones-menu" href="<?php echo $estadisticas?>">Estadisticas</a></li>
                   <li><a class="opciones-menu" href="<?php echo $logOut ?>">Cerrar sesión</a></li>
+                  <li><a class="opciones-menu" href="<?php echo $reiniciar ?>">Reiniciar</a></li>
                 </ul>
               </nav>
           </div>
