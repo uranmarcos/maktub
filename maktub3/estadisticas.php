@@ -71,9 +71,9 @@ if($incorrectas==1){
           <p>Estás en el nivel: <?php echo $nivel ?> <p>
         </div>
         <div class="estadisticas column">
-          Ya has completado el <?php echo $porcentajeDeJuego ?> % del juego.
+          Ya has completado el <?php echo round($porcentajeDeJuego) ?> % del juego.
           <div class="caja-porcentaje">
-            <div class="porcentajeDeJuego" style="width:<?php echo ($porcentajeDeJuego*2)?>px">
+            <div class="porcentajeDeJuego" style="width:<?php echo round($porcentajeDeJuego)?>%">
             </div>
           </div>
         </div>
