@@ -3,36 +3,36 @@ body{
 }
 .body-contacto{.
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   color: grey;
+  text-align: center;
   font-family: 'Gruppo', cursive;
 }
+
 .main-contacto{
-  width: 90%;
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   line-height: 4vh;
   font-family: 'Gruppo', cursive;
   text-align: center;
 }
-h1{
-  font-size: 2rem;
-}
-.porcentaje{
-  font-size: 4rem;
-}
-h2{
-  font-size: 2rem;
-  padding-bottom: 10%;
-}
-h3{
-  font-size: 1.5rem;
+.estadisticas{
+  height: 10vh;
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px grey;
 }
 a{
   text-decoration: none;
   text-align: center;
+  margin-top: 20px;
   color:grey;
   font-size: 1.5rem;
 }

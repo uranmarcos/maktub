@@ -1,6 +1,7 @@
 <?php
-  session_start();
+session_start();
   require_once("pdo.php");
+  require_once("calculoEstadisticas.php");
   include_once("header.php");
 
   $mail = $_SESSION["mail"];
@@ -27,7 +28,7 @@
   $porcentajeCorrectas = ($correctas *100/$totalRespuestas);
 
   if($porcentajeCorrectas == 100){
-    $mensaje = "¡¡¡EXCELENTE!!!<br>¡Nos sacamos el sombrero! No has fallado ni una vez";
+    $mensaje = "¡¡¡EXCELENTE!!!<br>¡Nos sacamos el sombrero!";
   } elseif (($porcentajeCorrectas>=80) && ($porcentajeCorrectas<100)){
     $mensaje = "¡BRAVO!<br>¡Seguí así!!!";
   } elseif (($porcentajeCorrectas>=60)&&($porcentajeCorrectas<80)) {
@@ -45,18 +46,31 @@
    <head>
      <title>Maktub</title>
      <meta charset="utf-8">
-     <link href="estadisticas.css" rel="stylesheet">
+     <link href="estadisticas2.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
    </head>
    <body class="body-contacto">
      <main class="main-contacto">
-        <h1><?php echo $mensaje ?> </h1>
-        <h1 class="porcentaje"><?php echo round($porcentajeCorrectas) ?>% </h1>
-        <h2>de respuestas correctas.</h2>
-        <h3>Estás en el nivel: <?php echo $nivel ?> </h3>
-        <h3>Has respondido: <?php echo $correctas ?> vez/veces bien! ;) </h3>
-        <h3>Y le has pifiado <?php echo $incorrectas ?> vez/veces. </h3>
+        <div class="estadisticas">
+          <h1><?php echo $mensaje ?> </h1>
+        </div>
+        <div class="estadisticas">
+          <h1 class="porcentaje"><?php echo round($porcentajeCorrectas) ?></h1>
+          <h2> % de respuestas correctas.</h2>
+        </div>
+        <div class="estadisticas">
+          <h3>Estás en el nivel: <?php echo $nivel ?> </h3>
+        </div>
+        <div class="estadisticas">
+          <h3>El promedio para este nivel es: <?php echo $promedioNivel?> %</h3>
+        </div>
+        <div class="estadisticas">
+          <h3>Has respondido: <?php echo $correctas ?> vez/veces bien! ;) </h3>
+        </div>
+        <div class="estadisticas">
+          <h3>Y le has pifiado <?php echo $incorrectas ?> vez/veces. </h3>
+        </div>
         <a  class="jugar" href="maktub2.php">Seguir Jugando</a>
      </main>
    </body>
