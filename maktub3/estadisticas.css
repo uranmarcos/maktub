@@ -15,19 +15,38 @@ body{
   flex-direction: column;
   align-items: center;
   margin-top: 5vh;
+  border-left: solid 1px grey;
+  border-right: solid 1px grey;
   margin-left: auto;
   margin-right: auto;
   line-height: 4vh;
   font-family: 'Gruppo', cursive;
   text-align: center;
 }
+p{
+  font-weight: bolder;
+}
 .estadisticas{
-  height: 10vh;
+  height: 8vh;
   color: grey;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 1px grey;
+
+}
+.column{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caja-porcentaje{
+  width: 200px;
+  height: 20px;
+  border: solid 1px grey;
+}
+.porcentajeDeJuego{
+  background-color: grey;
+  height: 20px;
 }
 a{
   text-decoration: none;

@@ -13,6 +13,7 @@ session_start();
   $mensaje="";
   $vecesCorrectas="veces";
   $vecesIncorrectas="veces";
+  $porcentajeDeJuego="";
 //busco en BBD valores para calcular estadisticas
   $query = $baseDeDatos -> Prepare
     ("SELECT nivel, correctas, incorrectas FROM usuarios where mail = '$mail'");
@@ -21,6 +22,7 @@ session_start();
 
 //asigno los valores a variables
   $nivel = $consultaBDD["nivel"];
+  $porcentajeDeJuego = $nivel*100/30;
   $correctas = $consultaBDD["correctas"];
   $incorrectas = $consultaBDD["incorrectas"];
 if($correctas==1){
@@ -52,7 +54,7 @@ if($incorrectas==1){
    <head>
      <title>Maktub</title>
      <meta charset="utf-8">
-     <link href="estadisticas2.css" rel="stylesheet">
+     <link href="estadisticas.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
    </head>
@@ -66,16 +68,23 @@ if($incorrectas==1){
           <h2> % de respuestas correctas.</h2>
         </div>
         <div class="estadisticas">
-          <h3>Estás en el nivel: <?php echo $nivel ?> </h3>
+          <p>Estás en el nivel: <?php echo $nivel ?> <p>
+        </div>
+        <div class="estadisticas column">
+          Ya has completado el <?php echo $porcentajeDeJuego ?> % del juego.
+          <div class="caja-porcentaje">
+            <div class="porcentajeDeJuego" style="width:<?php echo ($porcentajeDeJuego*2)?>px">
+            </div>
+          </div>
         </div>
         <div class="estadisticas">
-          <h3>El promedio para este nivel es: <?php echo $promedioNivel?> %</h3>
+          <p>El promedio para este nivel es: <?php echo $promedioNivel?> %</p>
         </div>
         <div class="estadisticas">
-          <h3>Has respondido: <?php echo $correctas ?> <?php echo $vecesCorrectas?> bien! ;) </h3>
+          <p>Has respondido: <?php echo $correctas ?> <?php echo $vecesCorrectas?> bien! ;) </p>
         </div>
         <div class="estadisticas">
-          <h3>Y le has pifiado <?php echo $incorrectas ?> <?php echo $vecesIncorrectas?> </h3>
+          <p>Y le has pifiado <?php echo $incorrectas ?> <?php echo $vecesIncorrectas?> </p>
         </div>
         <a  class="jugar" href="maktub2.php">Seguir Jugando</a>
      </main>

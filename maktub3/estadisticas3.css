@@ -1,0 +1,55 @@
+body{
+  background-color: black;
+}
+.body-contacto{.
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: grey;
+  text-align: center;
+  font-family: 'Gruppo', cursive;
+}
+
+.main-contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 4vh;
+  font-family: 'Gruppo', cursive;
+  text-align: center;
+}
+.estadisticas{
+  height: 8vh;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px red;
+}
+.column{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caja-porcentaje{
+  width: 200px;
+  height: 20px;
+  border: solid 1px grey;
+}
+.porcentajeDeJuego{
+  background-color: grey;
+  height: 20px;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  color:grey;
+  font-size: 1.5rem;
+}
+.jugar:hover{
+  border: solid 1px grey;
+}
