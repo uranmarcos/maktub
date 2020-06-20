@@ -1,28 +1,20 @@
 body{
   background-color: black;
-}
-.body-contacto{.
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
   color: grey;
   text-align: center;
   font-family: 'Gruppo', cursive;
 }
-
 .main-contacto{
-  display: flex;
+  width: 90%;
+  max-width: 500px;
   height: 50vh;
-  margin-top: 10vh;
+  margin: 30px auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
   border-left: solid 1px grey;
   border-right: solid 1px grey;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 4vh;
-  font-family: 'Gruppo', cursive;
-  text-align: center;
 }
 .boton-reiniciar{
   text-align: center;
