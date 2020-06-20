@@ -6,15 +6,14 @@ body{
 }
 .main-contacto{
   width: 90%;
+  padding: 10px;
   max-width: 500px;
-  height: 50vh;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-left: solid 1px grey;
   border-right: solid 1px grey;
-  line-height: 4vh;
 }
 .boton-reiniciar{
   text-align: center;

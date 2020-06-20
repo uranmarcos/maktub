@@ -15,7 +15,7 @@ session_start();
     ("UPDATE usuarios SET nivel='$nivel', correctas='$correctas',
     incorrectas='$incorrectas' WHERE mail='$mail'");
     $consulta->execute();
-    header("Location: maktub2.php");
+    echo "<script>location.href='index.php?removido=true';</script>";
     exit;
   }
 ?>
@@ -24,15 +24,15 @@ session_start();
   <head>
     <title>Maktub</title>
     <meta charset="utf-8">
-    <link href="reiniciar2.css" rel="stylesheet">
+    <link href="reiniciar3.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="main-contacto">
        <h2>Estás seguro/a<br> de querer reiniciar el juego?</h2>
-       <h2>Volverás al nivel 1 y tendrás que realizar nuevamente todos los niveles</h2>
-       <form name="" method="GET">
+       <h2>Volverás al nivel 1 y tendrás que realizar nuevamente todos los niveles. Deberás loguearte nuevamente, y arrancarás de cero.</h2>
+       <form name="" action="reiniciar.php" method="GET">
          <input class="boton-reiniciar" name="reinicio" type="submit" value="Reiniciar">
        </form>
       <a  class="jugar" href="maktub2.php">Seguir Jugando</a>
