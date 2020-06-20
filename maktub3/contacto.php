@@ -42,29 +42,28 @@ if($_POST){
   <head>
     <title>Maktub</title>
     <meta charset="utf-8">
-    <link href="contact.css" rel="stylesheet">
+    <link href="contacto.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
-  <body class="body-contacto">
+  <body>
     <main class="main-contacto">
-          <form action="contacto.php" method="POST">
-            <div class="<?php echo $form?>">
-              <h3> Si necesitás contactarnos por algún motivo<br>¡dejanos tu mensaje!</h3>
-              <p>Mail:</p>
-              <p style="color:red"><?php echo $errorMail ?></p>
-              <input class="mail" type="mail" name="mail" value=""
-                placeholder="En él recibirás tu respuesta">
-              <p>Mensaje:</p>
-              <p style="color:red"><?php echo $errorMensaje ?></p>
-              <textarea class="mensaje" name="mensaje">
-
-              </textarea>
-              <input class="enviar" type="submit" name="" value= "ENVIAR">
-            </div>
-          </form>
-          <h2><?php echo $confirmacion ?></h2>
-          <h3><a class="<?php echo $jugar?>" href="maktub2.php">Seguir Jugando</a></h3>
+      <div class="<?php echo $form?>">
+        <h3> Si necesitás contactarnos por algún motivo<br>¡dejanos tu mensaje!</h3>
+        <form action="contacto.php" method="POST">
+            <p>Mail:</p>
+            <p style="color:red"><?php echo $errorMail ?></p>
+            <input class="mail" type="mail" name="mail" value=""
+              placeholder="En él recibirás tu respuesta">
+            <p>Mensaje:</p>
+            <p style="color:red"><?php echo $errorMensaje ?></p>
+            <textarea class="mensaje" name="mensaje">
+            </textarea>
+            <input class="enviar" type="submit" name="" value= "ENVIAR">
+        </form>
+      </div>
+      <h2><?php echo $confirmacion ?></h2>
+      <h3><a class="<?php echo $jugar?>" href="maktub2.php">Seguir Jugando</a></h3>
     </main>
   </body>
 </html>
