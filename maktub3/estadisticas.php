@@ -54,7 +54,7 @@ if($incorrectas==1){
    <head>
      <title>Maktub</title>
      <meta charset="utf-8">
-     <link href="estadisticas.css" rel="stylesheet">
+     <link href="estadisticas2.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
    </head>
