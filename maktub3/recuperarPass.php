@@ -46,15 +46,17 @@
   <head>
     <title>maktub</title>
     <meta charset="utf-8">
-    <link href="login.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
-  <body class="body-login">
-    <header class="header-login">
+  <body class="body-index">
+    <header class="header-index">
     </header>
     <main>
+      <h1>Juego de lógica</h1>
       <div class="formulario">
-        <form class="" action="recuperarPass.php" method="POST">
+        <form class="caja-principal" action="recuperarPass.php" method="POST">
+          <p class="campos">Recuperá tu contraseña</p>
           <p class="campos">Nombre:
             <div>
               <input class="campoACompletar" placeholder="Ingresá el nombre registrado" type="text" name="name" value="<?php $name ?>">
