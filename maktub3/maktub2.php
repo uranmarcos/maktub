@@ -30,6 +30,7 @@ $ocultar ="";
 $correctas="";
 $posicionTexto = array_rand($textoEnMovimiento, 1);
 $texto = $textoEnMovimiento[$posicionTexto];
+$nivel22="";
 //Valido respuestas
 if($_GET){
 //Si la respuesta es correcta
@@ -77,6 +78,11 @@ if($_GET){
       $consulta2->execute();
   }
 }
+if($nivel==22){
+  $nivel22 = "verNivel22";
+  }else{
+  $nivel22="ocultarNivel22";
+  }
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +90,7 @@ if($_GET){
   <head>
     <title>Maktub</title>
     <meta charset="utf-8">
-    <link href="maktub4.css" rel="stylesheet">
+    <link href="maktub5.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
@@ -96,6 +102,7 @@ if($_GET){
         </div>
           <div class="valor">
             <h1><?php echo $resultado ?></h1>
+            <p class="<?php echo $nivel22?>">veinte mas dos</p>
             <h3><?php echo $mensajeError ?></h3>
             <br>
           </div>

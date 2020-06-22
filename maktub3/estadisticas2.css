@@ -7,20 +7,24 @@ body{
 .main-contacto{
   width: 90%;
   max-width: 500px;
-  margin: 30px auto;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-    border-left: solid 1px grey;
+  border-left: solid 1px grey;
   border-right: solid 1px grey;
-  line-height: 4vh;
+  line-height: 20px;
+}
+h2{
+  font-size: 20px;
 }
 p{
   font-weight: bolder;
 }
 .estadisticas{
-  height: 8vh;
+  height: 40px;
   color: grey;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;

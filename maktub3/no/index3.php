@@ -17,29 +17,27 @@ $usuarios = [];
 //variables login//
 
 
+
 if(isset($_GET["boton-register"])){
   $zIndexRegistro=2;
+  require("validacionRegister.php");
 }
 if(isset($_GET["boton-login"])){
   $zIndexLogin = 2;
-}
-
-if(isset($_POST["name-register"])){
-  $zIndexRegistro = 2;
-  require("validacionRegister.php");
-}
-if(isset($_POST["mailLogin"])){
-  $zIndexLogin = 2;
   require("validacionLogin.php");
+  }
+if(isset($_POST["register"])){
+  $zIndexRegistro = 2;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>
   <head>
     <title>maktub</title>
     <meta charset="utf-8">
-    <link href="index.css" rel="stylesheet">
+    <link href="index4.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
   <body class="body-index">
@@ -47,7 +45,7 @@ if(isset($_POST["mailLogin"])){
     </header>
     <main>
       <h1>Juego de lógica</h1>
-      <form action="index.php" method="GET">
+      <form action="index3.php" method="GET">
         <div class="caja-botones">
           <input class="boton" type="submit" name="boton-register"
            value="Registro">
@@ -64,29 +62,29 @@ if(isset($_POST["mailLogin"])){
         </div>
         <div style="z-index:<?php echo $zIndexRegistro?>" class="caja-principal">
           <div class="formulario">
-            <form class="formulario-interior" action="index.php" method="POST">
+            <form class="formulario-interior" name="register" action="index3.php" method="POST">
               <p class="campos">Nombre o apodo:
-                <input class="campoACompletar" type="text" name="name-register" placeholder="Entre 3 y 8 caracteres" value="<?php $nombre ?>">
+                <input class="campoACompletar" type="text" name="name" placeholder="Entre 3 y 8 caracteres" value="<?php $nombre ?>">
                 <p class="error">
                   <?php echo $errorName ?>
                 </p>
               </p>
               <p class="campos">Mail:
                 <br>
-                <input class="campoACompletar" type="text" name="mail-register" value="<?php $mail ?>">
+                <input class="campoACompletar" type="text" name="mail" value="<?php $mail ?>">
                 <p class="error">
                   <?php echo $errorMail ?>
                   <?php echo $errorMailExistente ?>
                 </p>
               </p>
               <p class="campos">Contraseña:
-                <input class="campoACompletar" type="password" placeholder="Entre 4 y 8 caracteres" name="pass-register" value"<?php $password ?>">
+                <input class="campoACompletar" type="password" placeholder="Entre 4 y 8 caracteres" name="pass" value"<?php $password ?>">
                 <p class="error">
                   <?php echo $errorPassword ?>
                 </p>
               </p>
               <p class="campos">Repetir Contraseña:
-                <input class="campoACompletar" type="password" name="passconf-register" value"<?php $passwordConfirmacion ?>">
+                <input class="campoACompletar" type="password" name="passconf" value"<?php $passwordConfirmacion ?>">
                 <p class="error">
                   <?php echo $errorPasswordConfirmacion ?>
                 </p>
@@ -99,15 +97,15 @@ if(isset($_POST["mailLogin"])){
         </div>
         <div style="z-index:<?php echo $zIndexLogin?>" class="caja-principal">
           <div class="formulario">
-            <form class="formulario-interior" action="index.php" method="POST">
+            <form class="formulario-interior" name"form-login" action="index3.php" method="POST">
               <p class="campos">Mail:
                 <div>
-                  <input class="campoACompletar" type="text" name="mailLogin" value="<?php $mail ?>">
+                  <input class="campoACompletar" type="text" name="mail" value="<?php $mail ?>">
                 </div>
               </p>
               <p class="campos">Contraseña:
                 <div>
-                  <input class="campoACompletar" type="password" name="pass-login" value"<?php $password ?>">
+                  <input class="campoACompletar" type="password" name="pass" value"<?php $password ?>">
                 </div>
               </p>
               <div class="recuperarPass">

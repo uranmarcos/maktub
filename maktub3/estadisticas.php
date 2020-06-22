@@ -1,6 +1,5 @@
 <?php
-session_start();
-  require_once("pdo.php");
+require_once("pdo.php");
   require_once("calculoEstadisticas.php");
   include_once("header.php");
 
@@ -25,6 +24,8 @@ session_start();
   $porcentajeDeJuego = $nivel*100/30;
   $correctas = $consultaBDD["correctas"];
   $incorrectas = $consultaBDD["incorrectas"];
+
+//texto según nivel alcanzado
 if($correctas==1){
   $vecesCorrectas="vez";
 }
@@ -46,7 +47,6 @@ if($incorrectas==1){
   } else{
         $mensaje = "Eh... ¿estás seguro/a<br>que querés el resultado?";
   }
-
  ?>
 
  <!DOCTYPE html>
@@ -58,7 +58,7 @@ if($incorrectas==1){
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
    </head>
-   <body class="body-contacto">
+   <body>
      <main class="main-contacto">
         <div class="estadisticas">
           <h2><?php echo $mensaje ?></h2>
@@ -68,7 +68,13 @@ if($incorrectas==1){
           <h2> % de respuestas correctas.</h2>
         </div>
         <div class="estadisticas">
+          <p>El promedio entre todos los jugadores es: <?php echo $promedioNivel?> %</p>
+        </div>
+        <div class="estadisticas">
           <p>Estás en el nivel: <?php echo $nivel ?> <p>
+        </div>
+        <div class="estadisticas">
+          <p>Puesto (por nivel alcanzado): <?php echo $rankingNivel?> <p>
         </div>
         <div class="estadisticas column">
           Ya has completado el <?php echo round($porcentajeDeJuego) ?> % del juego.
@@ -76,9 +82,6 @@ if($incorrectas==1){
             <div class="porcentajeDeJuego" style="width:<?php echo round($porcentajeDeJuego)?>%">
             </div>
           </div>
-        </div>
-        <div class="estadisticas">
-          <p>El promedio para este nivel es: <?php echo $promedioNivel?> %</p>
         </div>
         <div class="estadisticas">
           <p>Has respondido: <?php echo $correctas ?> <?php echo $vecesCorrectas?> bien! ;) </p>

@@ -19,7 +19,10 @@ $valor= [ 1 =>"1",
           16 => "++++-----",
           17 => 59, /*numeros primos*/
           18 => "nhezthca", /* nombre en aleman invertido*/
-          19 => 2584/*fibonacci*/
+          19 => 2584,/*fibonacci*/
+          20 => 202, /* mismo numero, con la suma de sus digitos*/
+          21 => "sc", /*elemento periodico*/
+          22 => "maktub"
         ];
 
 //RESPUESTAS CORRECTAS
@@ -41,7 +44,10 @@ $valores= [ 1 => 2,
             16 => "++++------",
             17 => 61,
             18 => "nheznuen",
-            19 => 4181
+            19 => 4181,
+            20 => 213,
+            21 =>"ti",
+            22=> "veinte mas tres"
           ];
 
 //MENSAJES DE ERROR
@@ -57,6 +63,9 @@ $errores = ["Está mal, pero no tan mal.",
             "Podría haber sido, pero no lo es.",
             "¡BIEN! Ah, no... Pará...",
             "Tenemos buenas y malas noticias para vos. Ah, no, solo malas.",
+            "Na, ¿en serio?",
+            "Menos mal que no te pagamos cada vez que le pifias, ¿no?",
+            "¿Nada mejor?"
             ];
 
 $textoEnMovimiento = [
