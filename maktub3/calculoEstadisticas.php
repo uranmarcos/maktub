@@ -1,7 +1,4 @@
 <?php
-session_start();
-require_once("pdo.php");
-include_once("header.php");
 //declaro las variables a utilizar
   $mail = $_SESSION["mail"];
   $nivel = $_SESSION["nivel"];

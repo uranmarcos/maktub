@@ -1,7 +1,8 @@
 <?php
+session_start();
 require_once("pdo.php");
-  require_once("calculoEstadisticas.php");
-  include_once("header.php");
+require_once("calculoEstadisticas.php");
+include_once("header.php");
 
   $mail = $_SESSION["mail"];
   $nivel = "";
