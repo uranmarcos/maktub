@@ -1,6 +1,6 @@
 # maktub
 Juego de lógica desarrollado en una página web dinámica, creada con HTML, CSS, PHP y MySQL.
-En cada nivel, se recibe en pantalla un valor que lo representa en base a alguna secuencia o patrón. El juego consiste en descifrar dicha lógica, y enviar el número que seguiria en la misma.
+En cada nivel, se recibe en pantalla un valor que lo representa en base a alguna secuencia o patrón. El juego consiste en descifrar dicha lógica, y enviar el valor que seguiria en la misma.
 Por ejemplo, en el primer nivel, se recibe en pantalla el valor "1". El valor que seguiria es "2". Al ingresarlo, se avanza de nivel y se recibe el valor "II", en representación del segundo nivel.
 Ingresando "III", se avanza de nivel.
 Si la respuesta es incorrecta se recibe un mensaje de error, aleatorio.
