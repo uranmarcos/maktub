@@ -7,6 +7,7 @@ Si la respuesta es incorrecta se recibe un mensaje de error, aleatorio.
 El juego cuenta con formulario de registro y login, almacena el nivel por usuario, permite recuperar la contraseña, brinda estadísticas por usuario(porcentaje de respuestas correctas, cantidad de respuestas incorrectas, nivel alcanzado, porcentaje de progreso del juego, etc).
 Posee formulario de contacto permitiendo al usuario enviar mensajes.
 Permite además reiniciar el juego por usuario, y volver al nivel 1.
+También almacena en un archivo json las respuestas incorrectas que ingresan los usuarios.
 
 Juego en desarrollo, falta generar aún la opción demo para probar los primeros niveles sin registrarse, además de retocar algunos detalles. Además está pendiente modificar el código PHP y utilizar funciones para las validaciones.
 
