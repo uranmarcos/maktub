@@ -1,0 +1,68 @@
+.logo{
+  display: block;
+  border: solid 1px blue;
+  height: 15vh;
+  min-height: 80px;
+  background-image: url("../img/logo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.head{
+      margin-top: 10px;
+      height: 100px;
+}
+.caja-header-left{
+      background-image: url("../img/logo.jpg");
+      background-size: 90%;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100px;
+}
+
+
+#menu{
+  height: 30px;
+  width: 150px;
+  color:grey;
+  border: solid 2px grey;
+  background-color: black;
+  font-size: 17px;
+  font-weight: bolder;
+}
+#superior{
+  display: none;
+}
+button#menu:hover + nav#superior, nav#superior:hover{
+  display: block;
+  text-align: center;
+}
+.opciones-burguer{
+  list-style-type: none;
+  padding-left: 0;
+}
+a{
+  color:grey;
+  text-decoration: none;
+}
+.opciones-menu{
+  color: grey;
+  font-weight: bolder;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.opciones-menu:hover{
+  background-color: grey;
+  text-decoration: none;
+  color:black;
+  width: 150px;
+  height: 20px;
+  line-height: 20px;
+}
+
+
+.deslogueo{
+  color: white;
+  text-decoration: none;
+}

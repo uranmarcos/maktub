@@ -42,15 +42,20 @@ if($_POST){
   <head>
     <title>Maktub</title>
     <meta charset="utf-8">
-    <link href="contacto.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/contacto0.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main class="main-contacto">
-      <div class="<?php echo $form?>">
-        <h3> Si necesitás contactarnos por algún motivo<br>¡dejanos tu mensaje!</h3>
-        <form action="contacto.php" method="POST">
+    <main class="row justify-content-center main">
+      <div class="col-10 col-md-6 col-xl-4">
+        <div class="<?php echo $form?>">
+          <h3> Si necesitás contactarnos por algún motivo<br>¡dejanos tu mensaje!</h3>
+          <form action="contacto.php" method="POST">
             <p>Mail:</p>
             <p style="color:red"><?php echo $errorMail ?></p>
             <input class="mail" type="mail" name="mail" value=""
@@ -60,10 +65,16 @@ if($_POST){
             <textarea class="mensaje" name="mensaje">
             </textarea>
             <input class="enviar" type="submit" name="" value= "ENVIAR">
-        </form>
+          </form>
+        </div>
+        <h2><?php echo $confirmacion ?></h2>
+        <h3><a class="<?php echo $jugar?>" href="maktub2.php">Seguir Jugando</a></h3>
       </div>
-      <h2><?php echo $confirmacion ?></h2>
-      <h3><a class="<?php echo $jugar?>" href="maktub2.php">Seguir Jugando</a></h3>
     </main>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

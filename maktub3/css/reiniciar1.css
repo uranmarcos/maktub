@@ -4,20 +4,18 @@ body{
   text-align: center;
   font-family: 'Gruppo', cursive;
 }
-.main-contacto{
-  width: 90%;
-  padding: 10px;
-  max-width: 500px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main{
+  margin-top:50px;
   border-left: solid 1px grey;
-  border-right: solid 1px grey;
+  border-right: 1px solid grey;
+}
+h2{
+  font-size: 25px;
 }
 .boton-reiniciar{
   text-align: center;
-  height: 50px;
+  height: 40px;
+  line-height: 40px;
   width: 200px;
   font-family: 'Gruppo', cursive;
   font-weight: bolder;
@@ -25,13 +23,18 @@ body{
   margin-top: 20px;
   color:black;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 .boton-reiniciar:hover{
   border: solid 2px grey;
   background-color: black;
   color:grey;
 }
-a{
+.jugar{
+  color:grey;
+    font-size: 30px;
+}
+a .jugar{
   text-decoration: none;
   text-align: center;
   margin-top: 20px;
@@ -39,5 +42,7 @@ a{
   font-size: 1.5rem;
 }
 .jugar:hover{
-  border: solid 1px grey;
+  border-bottom: solid 1px grey;
+  color: grey;
+  text-decoration: none;
 }

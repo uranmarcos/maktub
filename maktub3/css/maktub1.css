@@ -1,54 +1,50 @@
-
-/*NIVELES*/
 body{
+  background-image:url("fondo-negro.jpg");
+  background-position: center;
+  background-size: cover;
   background-color: black;
   font-family: 'Gruppo', cursive;
-}
-.body-niveles{
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
   color: grey;
+  text-align: center;
+  font-weight: bolder;
 }
-.main-niveles{
+
+.caja-valor{
+  height: 200px;
+  width: 90%;
   display: flex;
-  height: 80vh;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  flex-direction: column;
-  justify-content:space-between;
-  align-items: center;
-}
-.valor{
-  height: 30vh;
-  width: 90%;
 }
 h1{
-  display: block;
-  padding-top: 4vh;
-  font-size: 4rem;
-  text-align: center;
+  font-size: 80px;
+  font-weight: bolder;
 }
-h3{
-  font-size: 20px;
-  font-family: Gruppo, cursive;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
+h2{
+  font-size: 18px;
+
+
+
+
+
+
 }
+
 .respuesta{
-  height: 25vh;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 .campo-respuesta{
-  height: 10vh;
+  height: 70px;
   background-color: lightgrey;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 100%;
   text-align: center;
   font-family: 'Gruppo', cursive;
-  font-size: 8vh;
+  font-size: 40px;
   font-weight: bolder;
 }
 .ocultar{
@@ -60,24 +56,27 @@ h3{
   align-items: center;
   font-family: 'Gruppo', cursive;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 30px;
   background-color: grey;
   color: black;
   width: auto;
-  height: 8vh;
+  height: 60px;
   margin: 17px auto;
 }
 .enviar:hover{
-  border: solid 3px black;
+  border: solid 5px black;
 }
 .hidden{
   display: none;
 }
+
 .probar{
   text-align: center;
   font-family: 'Gruppo', cursive;
-  color: grey;
+  width: 60%;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   height: 30px;
   font-size: 20px;
   font-weight: bolder;
@@ -89,13 +88,12 @@ h3{
 .probar:hover{
   border-bottom: solid 2px grey;
 }
-.nivel{
-  height: 25vh;
-  display: flex;
-  align-items: center;
-}
-h2{
-  font-size: 2.4em;
+
+h3{
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 30px;
 }
 
 

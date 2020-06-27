@@ -5,7 +5,7 @@ require_once("pdo.php");
 $redireccion="";
 
   if($_SESSION["usuarioLogueado"]== true){
-    $redireccion = "maktub2.php";
+    $redireccion = "maktub0.php";
   } else {
     $redireccion = "demo.php";
   }
@@ -17,44 +17,50 @@ $redireccion="";
   <head>
     <title>maktub</title>
     <meta charset="utf-8">
-    <link href="help.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/help0.css" rel="stylesheet">
+    </head>
   <body>
-    <div class="body-ayuda">
-      <div class="contenido-ayuda">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-6 col-xl-4">
         <p class="como-jugar">¿Cómo jugar?</p>
-        <p>
-        1. En la pantalla te va a aparecer un valor (puede ser número, una palabra o simbolos).
-        Tenés que pensar: ¿en qué secuencia o patrón el valor que figura en
-        pantalla ocupa o representa el número de nivel en que estás? (en algunos niveles
-        esta lógica puede variar un poco, pero... ¡la idea es hacerte pensar!)
+        <p class="texto">
+          1. En la pantalla te va a aparecer un valor (puede ser número, una palabra o simbolos).
+          Tenés que pensar: ¿en qué secuencia o patrón el valor que figura en
+          pantalla ocupa o representa el número de nivel en que estás? (en algunos niveles
+          esta lógica puede variar un poco, pero... ¡la idea es hacerte pensar!)
         </p>
-        <p>
-        2. Una vez que lo descubras, pensá cuál sería el valor siguiente
-        en dicha secuencia.
+        <p class="texto">
+          2. Una vez que lo descubras, pensá cuál sería el valor siguiente
+          en dicha secuencia.
         </p>
-        <p>
-        3. Completás en el campo el valor que pensaste y <strong>¡LISTO!</strong>
-        <br>
-        Ej: en el primer nivel, a 1 le sigue 2. Si el valor en
-        pantalla fuese "uno", deberias ingresar "dos".
+        <p class="texto">
+          3. Completás en el campo el valor que pensaste y <strong>¡LISTO!</strong>
+          <br>
+           Ej: en el primer nivel, a 1 le sigue 2. Si el valor en
+          pantalla fuese "uno", deberias ingresar "dos".
         </p>
-        <p>
-        ¡La respuesta se debe ingresar sin tildes! Además, se distinguen
-        mayúsculas, minúsculas y espacios.<br>
-        Ahora sí, ¡a jugar!
+        <p class="texto"> La respuesta se debe ingresar sin tildes! Además, se distinguen
+          mayúsculas, minúsculas y espacios.<br>
+          Ahora sí, ¡a jugar!
         </p>
-        <br>
-        <p>
-        ¿Necesitás una ayuda extra?
-        Por si te perdés, debajo siempre te saldrá el número de
-        nivel en el que te encontrás.
+        <p class="texto">
+          ¿Necesitás una ayuda extra? Por si te perdés, debajo siempre te saldrá el número de
+          nivel en el que te encontrás.
         </p>
-      </div>
-      <div class="boton">
-        <a class="empezar" href=<?php echo $redireccion?>>¡Jugar!</a>
       </div>
     </div>
+    <div class="row justify-content-center">
+      <div class="col-auto empezar boton">
+        <a  href=<?php echo $redireccion?>>¡ Jugar !</a>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

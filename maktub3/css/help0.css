@@ -1,0 +1,33 @@
+/*   AYUDA.PHP*/
+body{
+  background-color: black;
+  color: grey;
+  font-family: 'Gruppo', cursive;
+}
+
+.como-jugar{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.texto{
+  text-align: justify;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.empezar a{
+  font-size: 30px;
+  color:grey;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.boton{
+  margin-bottom: 50px;
+}
+.empezar:hover{
+  border: grey 2px solid;
+  text-transform: uppercase;
+}
