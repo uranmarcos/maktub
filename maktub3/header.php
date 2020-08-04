@@ -1,7 +1,11 @@
 <?php
 //DECLARACION DE VARIABLES A USAR
   $logueo="menu";
-
+  $administrador="none";
+  $contacto = "#";
+  $estadisticas = "#";
+  $logOut = "#";
+  $reiniciar = "#";
 //TOMO NOMBRE PARA EL LOGUEO
   if(isset($_SESSION["name"])){
     $logueo = $_SESSION["name"];
@@ -9,12 +13,12 @@
     $estadisticas = "estadisticas.php";
     $logOut = "logout.php";
     $reiniciar = "reiniciar.php";
-  } else {
-    $contacto = "#";
-    $estadisticas = "#";
-    $logOut = "#";
-    $reiniciar = "#";
+    $admin = "admin.php";
   }
+  if($_SESSION["rol"] == "admin"){
+    $administrador = "block";
+  }
+ 
 ?>
 
 
@@ -48,6 +52,7 @@
                         <li><a class="opciones-menu" href="<?php echo $estadisticas?>">Estadisticas</a></li>
                         <li><a class="opciones-menu" href="<?php echo $logOut ?>">Cerrar sesión</a></li>
                         <li><a class="opciones-menu" href="<?php echo $reiniciar ?>">Reiniciar</a></li>
+                        <li><a class="opciones-menu" href="<?php echo $admin ?>" style="display:<?php echo $administrador ?>">Administración</a></li>
                     </ul>
                   </nav>
                 </div>

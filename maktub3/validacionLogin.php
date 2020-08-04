@@ -20,6 +20,7 @@ if ($_POST){
         $_SESSION["nivel"] = $datoUsuario["nivel"];
         $_SESSION["correctas"] = $datoUsuario["correctas"];
         $_SESSION["incorrectas"] = $datoUsuario["incorrectas"];
+        $_SESSION["rol"] = $datoUsuario["rol"];
         echo "<script>location.href='help.php?removido=true';</script>";
         } else {
           $error = "Los datos ingresados no son correctos";
