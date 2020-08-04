@@ -16,6 +16,7 @@ if($_SESSION["usuarioLogueado"] == false){
     $consultaBDD = $query -> fetch(PDO::FETCH_ASSOC);
 }
 
+
 //DECLARACION DE VARIABLES A USAR
 $logueo="menu";
 $mensajeError=NULL;
@@ -24,25 +25,37 @@ $botonEnviar = "submit";
 $botonProbarDeNuevo = "hidden";
 $incorrectas = [];
 $nivel = $consultaBDD["nivel"];
-$resultado = $valor[$nivel];
 $probar ="hidden";
 $ocultar ="";
 $correctas="";
 $posicionTexto = array_rand($textoEnMovimiento, 1);
 $texto = $textoEnMovimiento[$posicionTexto];
 $nivel22="";
+
+
+//CONSULTO VALOR Y RESPUESTA DEL NIVEL DEL JUGADOR A BDD
+$consulta = $baseDeDatos -> Prepare
+      ("SELECT * FROM niveles where nivel = '$nivel'");
+    $consulta -> execute();
+    $consultaRespuesta = $consulta -> fetch(PDO::FETCH_ASSOC);
+
+
+$valorAMostrar = $consultaRespuesta["valor"];
+$respuestaCorrecta = $consultaRespuesta["respuesta"];
+ 
+
 //Valido respuestas
 if($_GET){
 //Si la respuesta es correcta
-  if($_GET["respuesta"] == $valores[$nivel]){
-    $nivel = $nivel+1;
-    $resultado = $valor[$nivel];
+  if($_GET["respuesta"] == $respuestaCorrecta){
+    $nivelFinal = $nivel+1;
     $correctas = $nivel-1;
 
     $consulta = $baseDeDatos-> prepare
-    ("UPDATE usuarios SET nivel='$nivel', correctas = '$correctas'
+    ("UPDATE usuarios SET nivel='$nivelFinal', correctas = '$correctas'
     WHERE mail = '$mail'");
     $consulta->execute();
+    header("Location:maktub0.php"); 
   }
 //SI LA RESPUESTA ES INCORRECTA
   else {
@@ -57,7 +70,7 @@ if($_GET){
 
 
           $variableError = array_rand($errores, 1);
-          $resultado = NULL;
+          $valorAMostrar = NULL;
           $mensajeError = $errores[$variableError];
           $botonEnviar = "hidden";
           $probar= "probar";
@@ -105,7 +118,7 @@ if($nivel==22){
           <MARQUEE><?php echo $texto?></MARQUEE>
         </div>
         <div class="caja-valor">
-          <h1><?php echo $resultado ?></h1>
+          <h1><?php echo $valorAMostrar?></h1>
           <h2><?php echo $mensajeError ?></h2>
           <p class="<?php echo $nivel22?>">veinte mas dos</p>
         </div>
