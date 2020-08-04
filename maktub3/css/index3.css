@@ -34,27 +34,36 @@ h1{
 
 
 /* caja formularios*/
-.formulario{
-  height: auto;
-  min-height: 400px;
+.caja-compartida{
+  height: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.caja-principal{
+.caja-interna{
   position: absolute;
   top:0;
-  height: 100%;
-  background-color: white;
+  height: 400px;
+  width:100%;
   border: solid 1px grey;
+  background-color:white;
 }
+
+
+.formulario{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 /* texto de caja*/
 h4{
   font-size: 20px;
-  width:90%;
+  width:100%;
   line-height: 30px;
   font-weight: bolder;
 }
@@ -67,6 +76,7 @@ h4{
 .campos{
   text-align: left;
   margin-left: 5%;
+  margin-bottom: 10px;
   font-weight: bolder;
 }
 .recuperarPass{
@@ -86,12 +96,11 @@ border-bottom: grey 2px solid;
   color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   font-family: Gruppo, cursive;
   width: 60%;
   font-weight: bolder;
-  font-size: 18px;
-  height: 24px;
+  font-size: 16px;
+  height: 30px;
   }
 .boton-enviar:hover{
     background-color: white;

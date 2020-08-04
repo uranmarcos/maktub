@@ -43,7 +43,7 @@ if(isset($_POST["mailLogin"])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-    <link href="css/index1.css" rel="stylesheet">
+    <link href="css/index3.css" rel="stylesheet">
   </head>
   <body>
     <!-- header index -->
@@ -56,8 +56,10 @@ if(isset($_POST["mailLogin"])){
     <main class="row justify-content-center">
       <div class="col-10 col-md-6 col-xl-4">
           <!--  titulo -->
-          <div class"row">
-            <h1>Juego de lógica</h1>
+          <div class= "row">
+            <div class= "col-12 justify-content-center">
+              <h1>Juego de lógica</h1>
+            </div>
           </div>
 
           <!-- caja botones login y registro  -->
@@ -74,49 +76,52 @@ if(isset($_POST["mailLogin"])){
 
           <!-- caja formularios  -->
           <div class="row">
-            <div class="col-12 formulario">
-              <div style="z-index:1" class="caja-principal">
-                <div class="formulario">
+            <div class="col-12 caja-compartida">
+              
+              <!-- saludo bienvenida -->
+              <div style="z-index:1" class="caja-interna">
+                <div class="col-12 formulario">
                   <h4>Un valor por nivel ¿En qué secuencia o con qué patrón dicho valor representa el nivel? ¡Una vez que lo descubrás, avanzas!
                   </h4>
                 </div>
               </div>
-              <div style="z-index:<?php echo $zIndexRegistro?>" class="caja-principal">
-                <div class="formulario">
-                  <form class="formulario-interior" action="index.php" method="POST">
-                    <p class="campos">Nombre o apodo:
+
+              <!-- register -->
+              <div style="z-index:<?php echo $zIndexRegistro?>" class="row caja-interna">
+                  <form class="col-12 formulario" action="index.php" method="POST">
+                    <div class="campos">Nombre o apodo:
                       <input class="campoACompletar" type="text" name="name-register" placeholder="Entre 3 y 8 caracteres" value="<?php $nombre ?>">
-                      <p class="error">
+                      <div class="error">
                         <?php echo $errorName ?>
-                      </p>
-                    </p>
-                    <p class="campos">Mail:
-                      <br>
+                      </div>
+                    </div>
+                    <div class="campos">Mail:<br>
                       <input class="campoACompletar" type="text" name="mail-register" value="<?php $mail ?>">
-                      <p class="error">
+                      <div class="error">
                         <?php echo $errorMail ?>
                         <?php echo $errorMailExistente ?>
-                      </p>
-                    </p>
-                    <p class="campos">Contraseña:
+                      </div>
+                    </div>
+                    <div class="campos">Contraseña:
                       <input class="campoACompletar" type="password" placeholder="Entre 4 y 8 caracteres" name="pass-register" value"<?php $password ?>">
-                      <p class="error">
+                      <div class="error">
                         <?php echo $errorPassword ?>
-                      </p>
-                    </p>
-                    <p class="campos">Repetir Contraseña:
+                      </div>
+                    </div>
+                    <div class="campos">Repetir Contraseña:
                       <input class="campoACompletar" type="password" name="passconf-register" value"<?php $passwordConfirmacion ?>">
-                      <p class="error">
+                      <div class="error">
                         <?php echo $errorPasswordConfirmacion ?>
-                      </p>
-                    </p>
-                    <div>
-                      <input class="boton-enviar" type="submit" name="" value="Registrarme">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <input class="boton-enviar col-4 justify-content-center" type="submit" name="" value="Registrarme">
                     </div>
                   </form>
                 </div>
-              </div>
-              <div style="z-index:<?php echo $zIndexLogin?>" class="caja-principal">
+
+              <!-- login  -->
+              <div style="z-index:<?php echo $zIndexLogin?>" class="caja-interna">
                 <div class="formulario">
                   <form class="formulario-interior" action="index.php" method="POST">
                     <p class="campos">Mail:
@@ -135,12 +140,13 @@ if(isset($_POST["mailLogin"])){
                     <p class="error">
                       <?php echo $error ?>
                     </p>
-                    <div>
-                      <input class="boton-enviar" type="submit" name="" value="Ingresar">
+                    <div class="row">
+                      <input class="boton-enviar col-4 justify-content-center" type="submit" name="" value="Ingresar">
                     </div>
                   </form>
                 </div>
               </div>
+
             </div>
           </div>
 
