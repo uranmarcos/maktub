@@ -19,6 +19,9 @@ h1{
   font-weight: bolder;
   margin-top: 5px;
 }
+p{
+  font-weight: bolder;
+}
 
 /* botones login y registro */
 .boton{
@@ -113,3 +116,4 @@ border-bottom: grey 2px solid;
   font-weight: bolder;
   text-align: center;
 }
+
