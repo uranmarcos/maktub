@@ -59,7 +59,7 @@ if($incorrectas==1){
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link href="css/estadisticas1.css" rel="stylesheet">
+     <link href="css/estadisticas2.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
    </head>
@@ -70,18 +70,18 @@ if($incorrectas==1){
             <h2><?php echo $mensaje ?></h2>
           </div>
           <div class="row">
-            <div class= "col-8 columna-izquierda">
+            <div class= "col-6 columna-izquierda">
               <div>
-                <p>Respuestas correctas: </p>
+                <p>Tu promedio: </p>
               </div>
               <div>
                 <p>Promedio general:</p>
               </div>
               <div>
-                <p>Estás en el nivel:</p>
+                <p>Nivel:</p>
               </div>
               <div>
-                <p>Puesto (por nivel alcanzado):</p>
+                <p>Puesto:</p>
               </div>
               <div>
                 <p>Respondiste:</p>
@@ -90,11 +90,11 @@ if($incorrectas==1){
                 <p>Pifiaste</p>
               </div>
               <div>
-                <p>Has completado el:</p>
+                <p>Completado:</p>
               </div>
             </div>
 
-            <div class= "col-4 columna-derecha">
+            <div class= "col-6 columna-derecha">
               <div>
                 <p><?php echo round($porcentajeCorrectas)?>%</p>
               </div>
@@ -119,7 +119,7 @@ if($incorrectas==1){
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-auto">
+            <div class="col-12">
               <div class="caja-porcentaje">
                 <div class="porcentajeDeJuego" style="width:<?php echo round($porcentajeDeJuego)?>%">
                 </div>

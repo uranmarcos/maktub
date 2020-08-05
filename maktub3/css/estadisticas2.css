@@ -18,7 +18,7 @@ p{
   font-size: 17px;
 }
 .columna-izquierda{
-  text-align: right;
+  text-align: left;
   padding-right: 0;
 }
 .columna-derecha{
@@ -29,6 +29,8 @@ p{
 .caja-porcentaje{
   width: 200px;
   height: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   border: solid 1px grey;
 }
