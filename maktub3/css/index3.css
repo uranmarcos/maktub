@@ -1,23 +1,15 @@
 /*INDEX*/
 body{
-  background-image: url("fondobyn.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color:black;
   font-family: 'Gruppo', cursive;
   text-align: center;
 }
 .header{
-  height: 140px;
-  background-image: url("../img/logo2.jpg");
+  height: 30vh;
+  background-image: url("../img/logoMaktubGr.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-h1{
-  font-size: 30px;
-  font-weight: bolder;
-  margin-top: 5px;
 }
 p{
   font-weight: bolder;
@@ -25,7 +17,8 @@ p{
 
 /* botones login y registro */
 .boton{
-  color: black;
+  background-color:black;
+  color: #A7A7A7;
   text-align: center;
   height: 30px;
   font-size: 17px;
@@ -33,12 +26,13 @@ p{
 }
 .boton:hover{
   text-transform: uppercase;
+  border-bottom: 2px grey solid;
 }
 
 
 /* caja formularios*/
 .caja-compartida{
-  height: 400px;
+  min-height: 60vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -48,15 +42,16 @@ p{
 .caja-interna{
   position: absolute;
   top:0;
-  height: 400px;
+  min-height:60vh;
   width:100%;
   border: solid 1px grey;
-  background-color:white;
+  background-color:black;
+  color: grey;  
 }
 
 
 .formulario{
-  height: 400px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,11 +65,13 @@ h4{
   line-height: 30px;
   font-weight: bolder;
 }
-/*    caja login y register  */
 
+/*    caja login y register  */
 .campoACompletar{
   width: 90%;
   height:20px;
+  color: black;
+  font-family: verdana;
 }
 .campos{
   text-align: left;
@@ -95,19 +92,18 @@ font-weight: bolder;
 border-bottom: grey 2px solid;
 }
 .boton-enviar{
-  background-color: black;
-  color: white;
+  background-color: grey;
+  color: black;
   margin-left: auto;
   margin-right: auto;
   font-family: Gruppo, cursive;
   width: 60%;
   font-weight: bolder;
-  font-size: 16px;
-  height: 30px;
+  font-size: 20px;
+  height: 40px;
   }
 .boton-enviar:hover{
-    background-color: white;
-    color:black;
+  
     text-transform: uppercase;
     font-weight: bolder;
   }

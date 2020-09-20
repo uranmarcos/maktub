@@ -61,12 +61,7 @@
     <main class="row justify-content-center">
       <div class="col-10 col-md-6 col-xl-4">
       
-      <!--  titulo -->
-          <div class= "row">
-            <div class= "col-12 justify-content-center">
-              <h1>Juego de lógica</h1>
-            </div>
-          </div>
+      
            
           <div class="row">
             <div class="col-12 caja-compartida">

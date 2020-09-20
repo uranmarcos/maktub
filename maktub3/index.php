@@ -56,11 +56,7 @@ if(isset($_POST["mailLogin"])){
     <main class="row justify-content-center">
       <div class="col-10 col-md-6 col-xl-4">
           <!--  titulo -->
-          <div class= "row">
-            <div class= "col-12 justify-content-center">
-              <h1>Juego de lógica</h1>
-            </div>
-          </div>
+          
 
           <!-- caja botones login y registro  -->
           <div class="row">
@@ -74,14 +70,16 @@ if(isset($_POST["mailLogin"])){
             </form>
           </div>
 
-          <!-- caja formularios  -->
+          <!-- caja contenedora  -->
           <div class="row">
             <div class="col-12 caja-compartida">
               
               <!-- saludo bienvenida -->
               <div style="z-index:1" class="caja-interna">
                 <div class="col-12 formulario">
-                  <h4>Un valor por nivel ¿En qué secuencia o con qué patrón dicho valor representa el nivel? ¡Una vez que lo descubrás, avanzas!
+                  <h4>Un valor por nivel ¿En qué secuencia o con qué patrón dicho valor representa al número de nivel en que estás?
+                      <br>
+                      ¡Una vez que lo descubrás, avanzas!
                   </h4>
                 </div>
               </div>
