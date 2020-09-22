@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("pdo.php");
+
 $zIndexRegistro = 0;
 $zIndexLogin = 0;
 //variables register//
@@ -17,10 +18,10 @@ $usuarios = [];
 //variables login//
 
 
-if(isset($_GET["boton-register"])){
+if(isset($_GET["botonRegister"])){
   $zIndexRegistro=2;
 }
-if(isset($_GET["boton-login"])){
+if(isset($_GET["botonLogin"])){
   $zIndexLogin = 2;
 }
 
@@ -28,9 +29,14 @@ if(isset($_POST["name-register"])){
   $zIndexRegistro = 2;
   require("validacionRegister.php");
 }
-if(isset($_POST["mailLogin"])){
-  $zIndexLogin = 2;
-  require("validacionLogin.php");
+if(isset($_POST["botonLogin"])){
+    $mail = $_POST["mailLogin"];
+    $password = $_POST["passwordLogin"];
+    include("funciones.php");
+    
+    
+    $error =   validarUsuario($mail, $password, $baseDeDatos);
+    $zIndexLogin = 2;
 }
 ?>
 
@@ -62,9 +68,9 @@ if(isset($_POST["mailLogin"])){
           <div class="row">
             <form class="col-12" action="index.php" method="GET">
               <div class="row">
-                <input class="col-6 boton" type="submit" name="boton-register"
+                <input class="col-6 boton" type="submit" name="botonRegister"
                 value="Registro">
-                <input class="col-6 boton" type="submit" name="boton-login"
+                <input class="col-6 boton" type="submit" name="botonLogin"
                 value="Ingresar">
               </div>
             </form>
@@ -116,33 +122,34 @@ if(isset($_POST["mailLogin"])){
                       <input class="boton-enviar col-4 justify-content-center" type="submit" name="" value="Registrarme">
                     </div>
                   </form>
-                </div>
+              </div>
 
-              <!-- login  -->
+             
+                <!-- login  -->
               <div style="z-index:<?php echo $zIndexLogin?>" class="caja-interna">
-                <div class="formulario">
-                  <form class="formulario-interior" action="index.php" method="POST">
-                    <p class="campos">Mail:
-                      <div>
-                        <input class="campoACompletar" type="text" name="mailLogin" value="<?php $mail ?>">
-                      </div>
-                    </p>
-                    <p class="campos">Contraseña:
-                      <div>
-                        <input class="campoACompletar" type="password" name="pass-login" value"<?php $password ?>">
-                      </div>
-                    </p>
-                    <div class="recuperarPass">
-                      <a href="recuperarPass.php">Olvidé mi contraseña</a>
+                    <div class="formulario">
+                      <form class="formulario-interior" action="index.php" method="POST">
+                        <p class="campos">Mail:
+                          <div>
+                            <input class="campoACompletar" type="text" name="mailLogin" value="<?php $mail ?>">
+                          </div>
+                        </p>
+                        <p class="campos">Contraseña:
+                          <div>
+                            <input class="campoACompletar" type="password" name="passwordLogin" value="<?php $password ?>">
+                          </div>
+                        </p>
+                        <div class="recuperarPass">
+                          <a href="recuperarPass.php">Olvidé mi contraseña</a>
+                        </div>
+                        <p class="error">
+                          <?php echo $error ?>
+                        </p>
+                        <div class="row">
+                          <input class="boton-enviar col-4 justify-content-center" type="submit" name="botonLogin" value="Ingresar">
+                        </div>
+                      </form>
                     </div>
-                    <p class="error">
-                      <?php echo $error ?>
-                    </p>
-                    <div class="row">
-                      <input class="boton-enviar col-4 justify-content-center" type="submit" name="" value="Ingresar">
-                    </div>
-                  </form>
-                </div>
               </div>
 
             </div>
