@@ -16,14 +16,16 @@ $errorPassword="";
 $errorPasswordConfirmacion = "";
 $usuarios = [];
 //variables login//
-
+$seccion = "secciones/mensajeInicio.php";
 
 if(isset($_GET["botonRegister"])){
-  $zIndexRegistro=2;
+  $seccion = "secciones/register.php";
 }
 if(isset($_GET["botonLogin"])){
-  $zIndexLogin = 2;
+  $seccion = "secciones/login.php";
 }
+
+
 
 if(isset($_POST["name-register"])){
   $zIndexRegistro = 2;
@@ -33,7 +35,6 @@ if(isset($_POST["botonLogin"])){
     $mail = $_POST["mailLogin"];
     $password = $_POST["passwordLogin"];
     include("funciones.php");
-    
     
     $error =   validarUsuario($mail, $password, $baseDeDatos);
     $zIndexLogin = 2;
@@ -48,115 +49,35 @@ if(isset($_POST["botonLogin"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet"     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-    <link href="css/index3.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
   </head>
   <body>
-    <!-- header index -->
-    <header class="row justify-content-center">
-      <div class="col-10 col-md-6 col-xl-4 header">
-      </div>
-    </header>
-
-
-    <main class="row justify-content-center">
-      <div class="col-10 col-md-6 col-xl-4">
-          <!--  titulo -->
-          
-
-          <!-- caja botones login y registro  -->
-          <div class="row">
-            <form class="col-12" action="index.php" method="GET">
-              <div class="row">
-                <input class="col-6 boton" type="submit" name="botonRegister"
-                value="Registro">
-                <input class="col-6 boton" type="submit" name="botonLogin"
-                value="Ingresar">
-              </div>
-            </form>
+      <!-- header index -->
+      <header class="row justify-content-center">
+          <div class="col-10 col-md-6 col-xl-4 header animate__animated animate__backInLeft">
           </div>
-
-          <!-- caja contenedora  -->
-          <div class="row">
-            <div class="col-12 caja-compartida">
-              
-              <!-- saludo bienvenida -->
-              <div style="z-index:1" class="caja-interna">
-                <div class="col-12 formulario">
-                  <h4>Un valor por nivel ¿En qué secuencia o con qué patrón dicho valor representa al número de nivel en que estás?
-                      <br>
-                      ¡Una vez que lo descubrás, avanzas!
-                  </h4>
-                </div>
-              </div>
-
-              <!-- register -->
-              <div style="z-index:<?php echo $zIndexRegistro?>" class="row caja-interna">
-                  <form class="col-12 formulario" action="index.php" method="POST">
-                    <div class="campos">Nombre o apodo:
-                      <input class="campoACompletar" type="text" name="name-register" placeholder="Entre 3 y 8 caracteres" value="<?php $nombre ?>">
-                      <div class="error">
-                        <?php echo $errorName ?>
+      </header>
+      <main class="row justify-content-center">
+          <div class="col-10 col-md-6 col-xl-4">
+              <!-- caja botones login y registro  -->
+              <div class="row">
+                  <form class="col-12" action="index.php" method="GET">
+                      <div class="row">
+                          <input class="col-6 boton" type="submit" name="botonRegister" value="Registro">
+                          <input class="col-6 boton" type="submit" name="botonLogin" value="Ingreso">
                       </div>
-                    </div>
-                    <div class="campos">Mail:<br>
-                      <input class="campoACompletar" type="text" name="mail-register" value="<?php $mail ?>">
-                      <div class="error">
-                        <?php echo $errorMail ?>
-                        <?php echo $errorMailExistente ?>
-                      </div>
-                    </div>
-                    <div class="campos">Contraseña:
-                      <input class="campoACompletar" type="password" placeholder="Entre 4 y 8 caracteres" name="pass-register" value"<?php $password ?>">
-                      <div class="error">
-                        <?php echo $errorPassword ?>
-                      </div>
-                    </div>
-                    <div class="campos">Repetir Contraseña:
-                      <input class="campoACompletar" type="password" name="passconf-register" value"<?php $passwordConfirmacion ?>">
-                      <div class="error">
-                        <?php echo $errorPasswordConfirmacion ?>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <input class="boton-enviar col-4 justify-content-center" type="submit" name="" value="Registrarme">
-                    </div>
                   </form>
               </div>
-
-             
-                <!-- login  -->
-              <div style="z-index:<?php echo $zIndexLogin?>" class="caja-interna">
-                    <div class="formulario">
-                      <form class="formulario-interior" action="index.php" method="POST">
-                        <p class="campos">Mail:
-                          <div>
-                            <input class="campoACompletar" type="text" name="mailLogin" value="<?php $mail ?>">
-                          </div>
-                        </p>
-                        <p class="campos">Contraseña:
-                          <div>
-                            <input class="campoACompletar" type="password" name="passwordLogin" value="<?php $password ?>">
-                          </div>
-                        </p>
-                        <div class="recuperarPass">
-                          <a href="recuperarPass.php">Olvidé mi contraseña</a>
-                        </div>
-                        <p class="error">
-                          <?php echo $error ?>
-                        </p>
-                        <div class="row">
-                          <input class="boton-enviar col-4 justify-content-center" type="submit" name="botonLogin" value="Ingresar">
-                        </div>
-                      </form>
-                    </div>
+              <!-- caja contenedora  -->
+              <div class="row">
+                  <div class="col-12 cajaCompartida">
+                        <?php include($seccion)?>
+                  </div>
               </div>
-
-            </div>
           </div>
-
-      </div>
-    </main>
+      </main>
 
 
 

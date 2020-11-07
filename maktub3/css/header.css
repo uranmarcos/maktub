@@ -1,19 +1,11 @@
-.logo{
-  display: block;
-  border: solid 1px blue;
-  height: 15vh;
-  min-height: 80px;
-  background-image: url("../img/logo.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
+
 .head{
       margin-top: 10px;
-      height: 100px;
+      height: 140px;
+      border: solid 1px #A7A7A7;
 }
 .caja-header-left{
-      background-image: url("../img/logo.jpg");
+      background-image: url("../img/logoMaktubCh.jpg");
       background-size: 90%;
       background-repeat: no-repeat;
       background-position: center;
@@ -35,7 +27,7 @@
 }
 button#menu:hover + nav#superior, nav#superior:hover{
   display: block;
-  text-align: center;
+  text-align: left;
 }
 .opciones-burguer{
   list-style-type: none;
