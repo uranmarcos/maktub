@@ -8,7 +8,7 @@ require_once("validacionRespuestas.php");
 
 ?>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Maktub</title>

@@ -1,0 +1,139 @@
+body{    
+    font-family: 'Gruppo', cursive;
+    color:#c3c3c3;
+    text-align: center;
+    font-weight: bolder;
+  
+   background-color: black;
+}
+main{
+    padding-top:10px;
+    background-color: black;
+    color: #c3c3c3;
+    text-align:left;
+    font-size:18px;
+    font-family: 'Gruppo', cursive
+}
+header{
+    margin-top:0;
+}
+
+/* heeelp*/
+.titulo{
+    text-align: center;
+}
+
+
+/*botones*/
+.botonJugar{
+    width: 200px;
+    color: black;
+    height:30px;
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bolder;;
+}
+
+
+/*+ niveles  */
+
+.caja-valor{
+    height: 200px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1{
+    font-size: 80px;
+    font-weight: bolder;
+  }
+  h2{
+    font-size: 18px;
+  
+  
+  
+  
+  
+  
+  }
+  
+  .respuesta{
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .campo-respuesta{
+    height: 70px;
+    background-color: lightgrey;
+    width: 100%;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .ocultar{
+    display: none;
+  }
+  .enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: grey;
+    color: black;
+    width: auto;
+    height: 60px;
+    margin: 17px auto;
+  }
+  .enviar:hover{
+    border: solid 5px black;
+  }
+  .hidden{
+    display: none;
+  }
+  
+  .probar{
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+    width: 60%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .probar a{
+    color:grey;
+    text-decoration: none;
+  }
+  .probar:hover{
+    border-bottom: solid 2px grey;
+  }
+  
+  h3{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  
+  /*  nivel 22      */
+  .verNivel22{
+    display: block;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+  }
+  .ocultarNivel22{
+    display: none;
+  }
+  

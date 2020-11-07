@@ -16,7 +16,9 @@ $errorPassword="";
 $errorPasswordConfirmacion = "";
 $usuarios = [];
 //variables login//
+
 $seccion = "secciones/mensajeInicio.php";
+
 
 if(isset($_GET["botonRegister"])){
   $seccion = "secciones/register.php";
@@ -51,7 +53,7 @@ if(isset($_POST["botonLogin"])){
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet"     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index0.css" rel="stylesheet">
   </head>
   <body>
       <!-- header index -->
@@ -85,5 +87,6 @@ if(isset($_POST["botonLogin"])){
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

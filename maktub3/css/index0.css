@@ -70,7 +70,6 @@ h4{
 /*    caja login y register  */
 .filasForm{
   width: 100%;
-  margin-bottom:5px;
 }
 label{
   height:20px;
@@ -79,7 +78,7 @@ label{
   font-weight: bolder;
   width:80%;
 }
-.campoACompletar{
+.input{
   width: 80%;
   height:40px;
   color: black;
@@ -105,7 +104,7 @@ font-weight: bolder;
 }
 
 /* BOTON ENVIAR  */
-.botonEnviar{
+.botonInput{
   background-color: #c3c3c3;
   color: black;
   margin: 10px auto 0 auto;
@@ -115,7 +114,7 @@ font-weight: bolder;
   font-size: 20px;
   height: 40px;
   }
-.botonEnviar:hover{
+.botonInput:hover{
     text-transform: uppercase;
     font-weight: bolder;
   }
@@ -127,3 +126,9 @@ font-weight: bolder;
   text-align: center;
 }
 
+/*mensajes js*/
+.mensajeJs{
+  font-size:15px;
+  color: white;
+  height:15px;
+}
