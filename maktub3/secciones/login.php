@@ -18,9 +18,9 @@
         <?php echo $error ?>
     </p>
     <div class="row">
-        <input class="botonInput ustify-content-center" type="submit" name="Login" value="Ingresar">
+        <input class="botonInput justify-content-center" type="submit" name="Login" value="Ingresar">
     </diV>
-    <div class="recuperarPass">
-        <a href="recuperarPass.php">Olvidé mi contraseña</a>
-    </div>
+    <div class="row">
+        <input class="botonInput botonRecuperar justify-content-center" type="submit" name="RecuperarPass" value="Recuperar contraseña">
+    </diV>
 </form>

@@ -5,9 +5,6 @@
         </label>
         <input class="input" type="text" name="name" autocomplete="off" placeholder="" value="<?php $nombre ?>">
         <div class="mensajeJs" name="mensajeRegister"></div>
-        <div class="error">
-            <?php echo $errorName ?>
-        </div>
     </div>
     <div  class="filasForm">
         <label name="mail">
@@ -16,10 +13,6 @@
         <br>
         <input class="input" type="text" name="mail" autocomplete="off" value="<?php $mail ?>">
         <div class="mensajeJs" name="mensajeRegister"></div>
-        <div class="error">
-            <?php echo $errorMail ?>
-            <?php echo $errorMailExistente ?>
-        </div>
     </div>
     <div  class="filasForm">
         <label name="pass">
@@ -27,9 +20,6 @@
         </label>
         <input class="input" type="password" autocomplete="off" name="pass" value="<?php $password ?>">
         <div class="mensajeJs" name="mensajeRegister"></div>
-        <div class="error">
-            <?php echo $errorPassword ?>
-        </div>
     </div>
     <div  class="filasForm">
         <label name="passConfirm">
@@ -37,10 +27,10 @@
         </label>
         <input class="input" type="password" autocomplete="off" name="passConfirm" value="<?php $passwordConfirmacion ?>">
         <div class="mensajeJs" name="mensajeRegister"></div>
-        <div class="error">
-            <?php echo $errorPasswordConfirmacion ?>
-        </div>
     </div>
+    <div class="error">
+            <?php echo $error?>
+        </div>
     <div class="row">
         <input class="botonInput justify-content-center" type="submit" name="Register" value="Registrarme">
     </div>
