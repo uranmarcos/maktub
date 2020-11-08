@@ -3,28 +3,20 @@ body{
     color:#c3c3c3;
     text-align: center;
     font-weight: bolder;
-  
-   background-color: black;
+    background-color: black;
 }
 main{
-    padding-top:10px;
-    background-color: black;
-    color: #c3c3c3;
-    text-align:left;
-    font-size:18px;
-    font-family: 'Gruppo', cursive
+    padding-top:30px;
 }
 header{
     margin-top:0;
 }
 
-/* heeelp*/
+
+/****  inicio help.php  *///
 .titulo{
     text-align: center;
 }
-
-
-/*botones*/
 .botonJugar{
     width: 200px;
     color: black;
@@ -34,75 +26,103 @@ header{
     margin-bottom: 10px;
     font-weight: bolder;;
 }
+//*** end help.php  ***////
 
 
-/*+ niveles  */
 
-.caja-valor{
-    height: 200px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h1{
-    font-size: 80px;
+/***** niveles.php ****/
+h3{
+    font-size: 30px;
     font-weight: bolder;
-  }
-  h2{
-    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+    color:red;
+}
+h4{
+    color: lightgray;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+}
+.ocultar{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.mostrar{
+    display:"block"
+}
+
+main{
   
-  
-  
-  
-  
-  
-  }
-  
-  .respuesta{
+  padding:0;
+}
+
+/** cajas */
+.cajaTexto{
+  height: 10vh;
+}
+.cajaValor{
+  height:20vh;
+  line-height:20vh;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.respuesta{
+  height:20vh;
+}
+.probar{
+  height:10vh;
+  width: auto;
+}
+.nivel{
+  height:10vh;
+}
+.respuesta{
     height: 150px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-  }
-  .campo-respuesta{
+}
+
+
+.inputRespuesta{
     height: 70px;
+    width:90%;
+    margin: auto;
     background-color: lightgrey;
-    width: 100%;
     text-align: center;
     font-family: 'Gruppo', cursive;
     font-size: 40px;
     font-weight: bolder;
   }
-  .ocultar{
-    display: none;
-  }
-  .enviar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
+
+  /* BOTON ENVIAR FORM*/
+  .botonEnviar{
+    margin:20px auto;
     font-family: 'Gruppo', cursive;
     font-weight: bolder;
     font-size: 30px;
     background-color: grey;
     color: black;
-    width: auto;
+    width: 200px;
     height: 60px;
-    margin: 17px auto;
+    
   }
   .enviar:hover{
-    border: solid 5px black;
+    background-color:#c3c3c3;
   }
-  .hidden{
-    display: none;
-  }
-  
+
+
+  /*** probar de nuevo, respuesta incorrecta  */
   .probar{
     text-align: center;
     font-family: 'Gruppo', cursive;
-    width: 60%;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -115,15 +135,9 @@ header{
     text-decoration: none;
   }
   .probar:hover{
-    border-bottom: solid 2px grey;
+    font-size: 25px;
   }
   
-  h3{
-    font-size: 30px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 30px;
-  }
   
   
   /*  nivel 22      */

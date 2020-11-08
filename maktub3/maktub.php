@@ -2,34 +2,29 @@
 session_start();
 require_once("respuestas.php");
 require_once("pdo.php");
-require_once("validacionRespuestas.php");
+require("funciones/funcionesMaktub.php");
 
-$seccion ="secciones/help.php";
+$nivel = consultarNivel($mail, $baseDeDatos);
+$valor = consultarValor($nivel, $baseDeDatos);
+$respuestaCorrecta = consultarRespuesta($nivel, $baseDeDatos);
 
-/* variables para header*/
-//DECLARACION DE VARIABLES A USAR
-$logueo="menu";
-$administrador="none";
-$contacto = "#";
-$estadisticas = "#";
-$logOut = "#";
-$reiniciar = "#";
-//TOMO NOMBRE PARA EL LOGUEO
-if(isset($_SESSION["name"])){
-  $logueo = $_SESSION["name"];
-  $contacto = "contacto.php";
-  $estadisticas = "estadisticas.php";
-  $logOut = "logout.php";
-  $reiniciar = "reiniciar.php";
-  $admin = "admin.php";
-}
-if($_SESSION["rol"] == "admin"){
-  $administrador = "block";
-}
-if($_POST){
-    if(isset($_POST["jugar"])){
-        $seccion = "secciones/niveles.php";
+
+if(isset($_POST["enviar"])){
+    consultarRespuesta($nivel, $baseDeDatos);
+    $respuestaIngresada = $_POST["respuesta"];  
+    $compararRespuesta = compararRespuesta($respuestaIngresada, $respuestaCorrecta);
+    
+    if($compararRespuesta == true){
+        cambiarNivel($nivel, $baseDeDatos, $mail);
+    }else{  
+        $valor = "";
+        $ocultar = "none";
+        $probar = "block";
+        actualizarIncorrectas($mail, $baseDeDatos);
+        almacenarRespuestaIncorrecta($mail, $nivel, $respuestaIngresada);
+        $mensajeError = mensajeError($errores);
     }
+    
 }
 ?>
 
@@ -42,7 +37,7 @@ if($_POST){
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/maktub.css" rel="stylesheet">
+        <link href="css/maktub11.css" rel="stylesheet">
         <link href="css/header1.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
@@ -53,7 +48,7 @@ if($_POST){
         </div>    
         <div class="row justify-content-center">
             <main class="col-12 col-md-6 col-xl-4">
-                <?php include($seccion)?>
+                <?php include("secciones/niveles.php")?>
             </main>
         </div>
 

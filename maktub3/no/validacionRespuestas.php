@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 if($_SESSION["usuarioLogueado"] == false){
     header("Location: index.php");
   } else{
@@ -13,7 +13,7 @@ if($_SESSION["usuarioLogueado"] == false){
     $query -> execute();
     $consultaBDD = $query -> fetch(PDO::FETCH_ASSOC);
   }
-
+*/
 
 //DECLARACION DE VARIABLES A USAR
 $logueo="menu";

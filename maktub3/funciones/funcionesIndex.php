@@ -54,7 +54,7 @@ function login($mail, $password, $baseDeDatos){
             $_SESSION["correctas"] = $datosUsuario[0]["correctas"];
             $_SESSION["incorrectas"] = $datosUsuario[0]["incorrectas"];
             $_SESSION["rol"] = $datosUsuario[0]["rol"];
-            echo "<script>location.href = 'maktub.php';</script>";
+            echo "<script>location.href = 'start.php';</script>";
             exit;
             } else {
                 $error = "Los datos ingresados no son correctos";

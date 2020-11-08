@@ -5,9 +5,10 @@ require_once("pdo.php");
 $redireccion="";
 
   if($_SESSION["usuarioLogueado"]== true){
-    $redireccion = "maktub0.php";
+    $redireccion = "maktub.php";
+    $seccion = "secciones/niveles.php";
   } else {
-    $redireccion = "demo.php";
+    $redireccion = "index.php";
   }
 
  ?>
