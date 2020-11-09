@@ -43,7 +43,7 @@ if($_POST){
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href="css/menu.css" rel="stylesheet">
-        <link href="css/header2.css" rel="stylesheet">
+        <link href="css/header5.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     </head>
@@ -61,7 +61,8 @@ if($_POST){
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/maktub5.js"></script>
+        <script src="js/maktub6.js"></script>
+        <script src="js/form1.js"></script>
 
     </body>
 </html>   

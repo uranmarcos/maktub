@@ -1,5 +1,8 @@
 let input = document.querySelectorAll(".input");
 let inputBoton = document.querySelectorAll(".botonInput");
+let textarea = document.querySelectorAll(".textarea");
+
+
 
 inputBoton.forEach(function(valor){
     valor.addEventListener("mouseover", function(){
@@ -15,6 +18,23 @@ input.forEach(function(valor){
 })
 
 
+textarea.forEach(function(valor){
+    valor.addEventListener("focus", function(){
+        valor.addEventListener('keyup', function(){
+            let mensajeIngresado = valor.value;
+            let campoMensaje = valor.nextElementSibling;
+            validarTextarea(mensajeIngresado, campoMensaje);
+        })    
+    })
+})
+    function validarTextarea(mensajeIngresado, campoMensaje){
+        if(mensajeIngresado.length<10){
+            campoMensaje.innerHTML="Debe escribir al menos 10 caracteres";
+        }else{
+            campoMensaje.innerHTML="";
+        }
+    }
+    
 
 /*validacion campos del form */
 input.forEach(function(valor){
@@ -80,7 +100,6 @@ function habilitarBoton(){
 }
 function validarForm(nombre, valor){
     let campoMensaje = document.getElementsByName("mensaje"+nombre);
-    console.log(campoMensaje);
     campoMensaje.forEach(function(vari){
         if((vari.textContent.includes("Debe")== true) || 
             (vari.textContent.includes("las")== true)){

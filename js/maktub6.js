@@ -12,5 +12,4 @@ function mostrarMenu(){
 
 function ocultarMenu(){
     menuDesplegable.className="ocultar";
-    console.log("hola");
 }

@@ -16,6 +16,7 @@ nav{
 }
 .opcionesNav{
     border: solid 1px #c3c3c3;
+    text-align: center;
     font-size: 18px;
 }
 .saludo:hover{

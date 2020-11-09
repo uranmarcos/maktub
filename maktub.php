@@ -38,7 +38,7 @@ if(isset($_POST["enviar"])){
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href="css/maktub.css" rel="stylesheet">
-        <link href="css/header4.css" rel="stylesheet">
+        <link href="css/header5.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     </head>
