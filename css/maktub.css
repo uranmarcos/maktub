@@ -6,12 +6,11 @@ body{
     background-color: black;
 }
 main{
-    padding-top:30px;
-}
-header{
-    margin-top:0;
-}
-
+    height:75vh;
+    margin-top: 0;
+    position: relative;
+    top:0;
+}    
 
 /****  inicio help.php  *///
 .titulo{

@@ -37,24 +37,26 @@ if(isset($_POST["enviar"])){
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/maktub11.css" rel="stylesheet">
-        <link href="css/header1.css" rel="stylesheet">
+        <link href="css/maktub.css" rel="stylesheet">
+        <link href="css/header4.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
-            <?php include("header.php");?>
+        <div class="contenedor col-10 col-xl-5"> 
+                <div class="row justify-content-center">
+                    <?php include("header.php");?>
+                </div>    
+                <main class="row justify-content-center">
+                        <?php include("secciones/niveles.php")?>
+                </main>
         </div>    
-        <div class="row justify-content-center">
-            <main class="col-12 col-md-6 col-xl-4">
-                <?php include("secciones/niveles.php")?>
-            </main>
-        </div>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/maktub6.js"></script>
 
     </body>
 </html>    
