@@ -1,3 +1,16 @@
+<?php
+    
+    $consultaBDD = consultarABaseDeDatos($mail, $baseDeDatos);
+    $nivel = consultarNivel($mail, $baseDeDatos);
+    $porcentajeDeJuego = calcularPorcentajeDeJuego($nivel);
+    $correctas=consultarCorrectas($consultaBDD);
+    $incorrectas=consultarIncorrectas($consultaBDD);
+    $porcentajeCorrectas = calcularPorcentajeDeCorrectas($correctas, $incorrectas);
+    $mensaje = mostrarMensaje($porcentajeCorrectas);
+    $rankingNivel = consultarRanking($baseDeDatos, $mail);
+    $promedioGeneral = calcularPromedioGeneral($baseDeDatos);
+?>
+
 <div class="col-10">
         <p class= "tituloMenu"><?php echo $mensaje ?></p>
         <div class="row">
@@ -13,7 +26,7 @@
                 <p>Promedio general:</p>
             </div>
             <div class= "col-6 columnaDerecha">
-                <p><?php echo $promedioNivel?> %</p>
+                <p><?php echo $promedioGeneral?> %</p>
             </div>
         </div>    
         <div class="row">
@@ -34,10 +47,10 @@
         </div>    
         <div class="row">      
             <div class= "col-6 columnaIzquierda">
-                <p>Respondiste:</p>
+                <p>Respondiste bien:</p>
             </div>
             <div class= "col-6 columnaDerecha">
-                <p><?php echo $correctas ?> <?php echo $vecesCorrectas?> bien! ;)</p>
+                <p><?php echo $correctas ?></p>
             </div>
         </div>    
         <div class="row">      
@@ -45,7 +58,7 @@
                 <p>Pifiaste</p>
             </div>
             <div class= "col-6 columnaDerecha">
-                <p><?php echo $incorrectas ?> <?php echo $vecesIncorrectas?> </p>
+                <p><?php echo $incorrectas ?></p>
             </div>
         </div>    
         <div class="row cajaPorcentaje justify-content-center">
