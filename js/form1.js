@@ -37,7 +37,9 @@ textarea.forEach(function(valor){
     
 
 /*validacion campos del form */
-input.forEach(function(valor){
+input.forEach(function(valor){setTimeout(() => {
+    
+}, timeout);
     valor.addEventListener("focus", function(){
         valor.addEventListener('keyup', function(){
             let inputName = valor.getAttribute("name");

@@ -1,35 +1,35 @@
 <?php
 session_start();
 require_once("pdo.php");
+require("funciones/funciones.php");
 
-if($_SESSION["usuarioLogueado"] == false){
-    header("Location: index.php");
-    } else{
-        $logueo = $_SESSION["name"];
-        $mail = $_SESSION["mail"];
-        $rol = $_SESSION["rol"];
-        
-        if($rol == "admin"){
-            $administrador = "block";
-        }else{
-            $administrador="none";
-        }
-}
 $seccion = "secciones/perfil.php";
 
+
+
 if($_POST){
-    if(isset($_POST["estadisticas"])){
+    //opciones menu
+    if(isset($_POST["opcionEstadisticas"])){
             $seccion ="secciones/estadisticas.php";
-        } else if(isset($_POST["contacto"])){
+            include("funciones/funcionesEstadisticas.php");
+        } else if(isset($_POST["opcionContacto"])){
             $seccion ="secciones/contacto.php";
-        }else if(isset($_POST["perfil"])){
+        }else if(isset($_POST["opcionPerfil"])){
             $seccion ="secciones/perfil.php";
-        }else if(isset($_POST["cerrar"])){
+        }else if(isset($_POST["opcionCerrar"])){
             $seccion ="secciones/logOut.php";
-        }else if(isset($_POST["reiniciar"])){
+        }else if(isset($_POST["opcionReiniciar"])){
             $seccion ="secciones/reiniciar.php";
         }
-    }
+        
+    // acciones formulario
+        else if(isset($_POST["seguirJugando"])){
+            echo "<script>location.href='maktub.php';</script>";
+        }
+        else if (isset($_POST["reiniciar"])){
+            reiniciar($nivel, $correctas, $incorrectas,$mail, $baseDeDatos);
+        }
+}
 
 ?>
 
@@ -42,7 +42,7 @@ if($_POST){
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/menu1.css" rel="stylesheet">
         <link href="css/header5.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">

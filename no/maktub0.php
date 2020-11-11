@@ -4,8 +4,9 @@ require_once("respuestas.php");
 require_once("pdo.php");
 require_once("header.php");
 require_once("validacionRespuestas.php");
-
-
+//TEXTO EN MOVIMIENTO
+$posicionTexto = array_rand($textoEnMovimiento, 1);
+$texto = $textoEnMovimiento[$posicionTexto];
 ?>
 
 <!DOCTYPE html>

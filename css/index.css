@@ -88,21 +88,7 @@ label{
 
 
 /* LINK RECUPERAR PASSWORD */
-.recuperarPass{
-text-align: center;
-height:20px;
-line-height: 20px;;
-font-size:15px;
-font-weight: bolder;
-}
-.recuperarPass a{
-  text-align: center;
-  text-decoration: none;
-  color:#c3c3c3;
-}
-.recuperarPass a:hover{
-  font-size:18px;
-}
+
 
 /* BOTON ENVIAR  */
 .botonInput{

@@ -1,0 +1,92 @@
+body{
+    background-color: black;
+    color: #c3c3c3;
+}
+main{
+    min-height:75vh;
+    margin-top: 0;
+    position: relative;
+    top:0;
+    padding-top:30px;
+}
+.formMenu{
+    min-height:50vh;
+}
+
+.tituloMenu{
+    font-size:20px;
+    text-align:center;
+}
+label{
+    font-size: 18px;
+    margin-top:5px;
+}
+.input, label{
+    width: 100%;;
+}
+textarea{
+    height:25vh;
+    padding-left:0;
+}
+.botonInput{
+    margin-top:10px;
+   margin-bottom:10px;
+}
+.botonInput:hover{
+    background-color: black;
+    color: #c3c3c3;
+    font-weight: bolder;
+    border: solid 2px #c3c3c3;
+}
+.mensajeJs{
+    color: red;
+}
+
+/****    botones   reiniciar   *****/ 
+.seguirJugando{
+        text-align: center;
+        height:20px;
+        line-height: 20px;;
+        font-size:15px;
+        font-weight: bolder;
+        background-color: black;
+        border: none;
+        color:#c3c3c3;    
+    }
+.seguirJugando:hover{
+        border: none;
+        font-size: 20px;
+        height:25px;
+}
+
+/* estadisticas */
+.columnaIzquierda{
+    text-align: right;
+}
+.columnaDerecha{
+    text-align:left;
+}
+.cajaPorcentaje{
+    position: relative;
+    width:200px;
+    margin:auto;
+}
+.porcentaje{
+    position: absolute;
+    top:0;
+    padding:0;
+    width:200px;
+    border: solid 1px grey;
+    z-index:2;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    color: white;
+}
+.porcentajeDeJuego{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:  grey;
+    height:30px;
+}

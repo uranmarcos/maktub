@@ -2,7 +2,7 @@
 session_start();
 require_once("respuestas.php");
 require_once("pdo.php");
-require("funciones/funcionesMaktub.php");
+require("funciones/funciones.php");
 
 $nivel = consultarNivel($mail, $baseDeDatos);
 $valor = consultarValor($nivel, $baseDeDatos);
@@ -26,6 +26,7 @@ if(isset($_POST["enviar"])){
     }
     
 }
+$texto=mostrarTexto($textoEnMovimiento);
 ?>
 
 <!DOCTYPE html>

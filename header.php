@@ -11,11 +11,11 @@
     </nav>    
     <div class="row">
         <form class="ocultar" id="formMenu"  action="menu.php" method="POST">    
-            <input class="boton" type="submit" name="perfil" value="Perfil">
-            <input class="boton" type="submit" name="contacto" value="Contacto">
-            <input class="boton" type="submit" name="estadisticas" value="Estadísticas">
-            <input class="boton" type="submit" name="salir" value="Cerrar Sesion">
-            <input class="boton" type="submit" name="reiniciar" value="Reiniciar">
+            <input class="boton" type="submit" name="opcionPerfil" value="Perfil">
+            <input class="boton" type="submit" name="opcionContacto" value="Contacto">
+            <input class="boton" type="submit" name="opcionEstadisticas" value="Estadísticas">
+            <input class="boton" type="submit" name="opcionCerrar" value="Cerrar Sesion">
+            <input class="boton" type="submit" name="opcionReiniciar" value="Reiniciar">
         </form>
     </div>    
      

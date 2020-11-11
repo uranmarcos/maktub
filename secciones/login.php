@@ -9,7 +9,7 @@
     <div class="filasForm">
         <label  name="password">
             Contraseña:
-        </label>    
+        </label> 
         <input class="input" type="password" name="pass" value="<?php $password ?>">
         <div class="mensajeJs" name="mensajeLogin"></div>
     </div>
